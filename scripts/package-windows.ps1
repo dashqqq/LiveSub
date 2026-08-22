@@ -114,7 +114,7 @@ if ($LASTEXITCODE -ne 0) { throw "Could not assemble the private Python runtime"
 # the private worker runtime.
 $fasterWhisperAudio = Join-Path $payloadPackages "faster_whisper\audio.py"
 $audioSource = [System.IO.File]::ReadAllText($fasterWhisperAudio)
-$audioSource = $audioSource -replace "(?m)^import av\r?\n", @'
+$audioSource = $audioSource -replace "(?m)^import av$", @'
 try:
     import av
 except ModuleNotFoundError:
@@ -151,7 +151,7 @@ foreach ($requiredStagedFile in @(
 # installer. This runs from the exact private runtime tree that will ship.
 Push-Location $payload
 try {
-    & (Join-Path $payloadPython "python.exe") -B -c "import ai_worker.worker, ai_worker.language_id, ai_worker.language_packs, faster_whisper; from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey; assert faster_whisper.audio.av is None"
+    & (Join-Path $payloadPython "python.exe") -B -c "import ai_worker.worker, ai_worker.language_id, ai_worker.language_packs, faster_whisper; from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey; assert faster_whisper.audio.av is None; assert faster_whisper.audio.np.__name__ == 'numpy'"
     if ($LASTEXITCODE -ne 0) { throw "Packaged inference/security import smoke test failed" }
 } finally {
     Pop-Location
