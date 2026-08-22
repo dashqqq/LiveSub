@@ -1,0 +1,50 @@
+# LiveSub v0.1.0 Preview redistribution clearance
+
+Reviewed: 2026-08-22
+
+Scope: the rebuilt Windows installer produced from `scripts/package-windows.ps1`, not development dependencies or unbundled registry candidates. This is an engineering due-diligence record, not legal advice.
+
+## Current decision
+
+**Installer redistribution: BLOCKED pending owner identity/license confirmation.**
+
+The third-party payload can be rebuilt into a notice-complete distributable form. The remaining release-blocking item is the LiveSub application itself: `Cargo.toml` says MIT, but the repository has no root `LICENSE`, and available history identifies only the account name `dashqqq`. The owner must provide or approve the exact copyright-holder text. No legal name or company has been invented.
+
+The current pre-audit installer must not be uploaded. Its obsolete PyAV/FFmpeg codec payload lacks the collected codec notices, its executable metadata is incomplete, and its build commit was not recorded. The packaging changes remove PyAV/FFmpeg and regenerate the installer from reviewed source.
+
+## Clearance matrix
+
+| Component | License | Redistribution | Commercial use | Attribution / inclusion | Status |
+| --- | --- | --- | --- | --- | --- |
+| LiveSub application | Intended MIT per `Cargo.toml`; root grant incomplete | Owner has not supplied exact root license text | Not determined by public metadata | Add canonical root license with owner-approved copyright line | **OWNER REVIEW REQUIRED** |
+| CPython 3.12.10 embeddable x64 | PSF-2.0 plus incorporated notices | Expressly permitted subject to included terms | Permitted | Preserve `python/LICENSE.txt`; comply with Microsoft Distributable Code restrictions | **CLEARED WITH NOTICE** |
+| Microsoft VC runtime 14.42.34438.0 in CPython | Microsoft Distributable Code conditions incorporated into Python Windows license | Windows local deployment permitted; Python notice expressly covers redistribution of its Windows binary build | Permitted under the terms | Do not remove notices, imply endorsement, target non-Windows platforms, or distribute in malicious/deceptive software | **CLEARED WITH NOTICE** |
+| faster-whisper 1.2.1 | MIT | Permitted | Permitted | Include SYSTRAN MIT notice | **CLEARED WITH NOTICE** |
+| SYSTRAN faster-whisper-small revision `536b066...` | MIT; conversion of OpenAI Whisper small | Permitted by exact model repository and upstream Whisper MIT terms | Permitted | Include SYSTRAN/OpenAI MIT notices and provenance | **CLEARED WITH NOTICE** |
+| Silero VAD v6 graph | MIT | Permitted | Permitted | Include Silero and faster-whisper notices; preserve graph provenance/hash | **CLEARED WITH NOTICE** |
+| CTranslate2 4.8.1 | MIT plus native third-party terms | Permitted | Permitted | Include CTranslate2 and pinned third-party texts | **CLEARED WITH NOTICE** |
+| Intel oneMKL 2025.3 | Intel Simplified Software License plus supplied third-party notices | Unmodified binary redistribution expressly permitted | Permitted | Reproduce copyright, terms, and relevant 2025.3 third-party notices | **CLEARED WITH NOTICE** |
+| Intel OpenMP 2025.3 (`libiomp5md.dll`) | Intel Simplified Software License plus supplied third-party notices | Exact DLL matches official redistributable package; unmodified redistribution permitted | Permitted | Reproduce terms/notices | **CLEARED WITH NOTICE** |
+| oneDNN 3.1.1 and CTranslate2 permissive subcomponents | Apache-2.0, MIT, BSD-3-Clause, Zlib as recorded | Permitted | Permitted | Preserve exact pinned licenses and notices | **CLEARED WITH NOTICE** |
+| NVIDIA cuBLAS/cuBLASLt 12.9.2.10 | NVIDIA SDK License Agreement | DLL names are in CUDA 12.9 Attachment A; versioned filename variants are covered | Permitted in an application meeting distribution requirements | Include NVIDIA terms; restrict access to application use; do not imply endorsement | **CLEARED WITH NOTICE** |
+| NVIDIA NVRTC 12.9.86 | NVIDIA SDK License Agreement | NVRTC and builtins DLLs are named redistributables | Permitted under agreement | Include NVIDIA terms | **CLEARED WITH NOTICE** |
+| NVIDIA cuDNN 9.24.0.43 and compatibility DLL 9.10.2.21 | NVIDIA SDK License Agreement and cuDNN Supplement | Current supplement permits runtime `.dll` distribution | Permitted under agreement | Include NVIDIA/cuDNN terms | **CLEARED WITH NOTICE** |
+| ONNX Runtime 1.29.0 | MIT plus package third-party notices | Permitted | Permitted | Preserve included license and `ThirdPartyNotices.txt` | **CLEARED WITH NOTICE** |
+| Remaining packaged Python distributions | Permissive/MPL expressions listed individually in SBOM | Permitted under recorded terms | No non-commercial restriction found | Preserve collected package notices; MPL files remain unmodified and supplied | **CLEARED WITH NOTICE** |
+| Windows runtime Rust crates | Permissive expressions listed individually in SBOM | Permitted under recorded terms | No non-commercial restriction found | Preserve collected crate notices | **CLEARED WITH NOTICE** |
+| Inno Setup 6.7.3 | Inno Setup License | License permits use for any purpose and redistribution subject to conditions; generated Setup may be distributed | Commercial applications expressly permitted | Built-in copyright/site references retained; documentation acknowledgment appreciated but not required | **CLEARED WITH NOTICE** |
+| PyAV / FFmpeg / x264 / x265 / media codec DLLs | Multiple, including LGPL/GPL/codec considerations | Removed because LiveSub does not use media-file decoding | Not applicable | Verify absence in rebuilt payload | **NOT BUNDLED** |
+| PyTorch | Not applicable | Not shipped | Not applicable | None | **NOT BUNDLED** |
+| Qwen / IndicTrans2 / OPUS / Marian / M2M100 / NLLB weights | Candidate-specific terms | Registry metadata only; no weights shipped | Not applicable to this release | Audit independently before future inclusion | **NOT BUNDLED** |
+
+## Conditions before publication
+
+1. Owner supplies or approves the exact LiveSub root-license copyright line.
+2. Add the root `LICENSE` without changing third-party licensing.
+3. Commit reviewed source and compliance inputs.
+4. Rebuild from that commit; verify PyAV/FFmpeg absence and bundled notices.
+5. Complete Preview smoke gates, secret/private-payload scan, install/uninstall test and binary scan.
+6. Generate final checksum/SBOM from the rebuilt artifact.
+7. Only then create the immutable `v0.1.0` tag, upload assets to the existing draft, and publish it as a pre-release.
+
+Code signing and full accuracy certification remain separate Stable-release work and do not alter the redistribution decision above.

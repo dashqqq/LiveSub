@@ -1,7 +1,8 @@
 param(
     [string]$PythonPath = "python",
     [string]$ModelDirectory = "models",
-    [string]$InnoCompiler = "$env:LOCALAPPDATA\Programs\Inno Setup 6\ISCC.exe"
+    [string]$InnoCompiler = "$env:LOCALAPPDATA\Programs\Inno Setup 6\ISCC.exe",
+    [switch]$AllowMissingRootLicense
 )
 
 $ErrorActionPreference = "Stop"
@@ -14,9 +15,27 @@ $sourcePython = (Get-Command $PythonPath -ErrorAction Stop).Source
 $sourcePythonRoot = Split-Path $sourcePython -Parent
 $sourceModelRoot = [System.IO.Path]::GetFullPath((Join-Path $workspace $ModelDirectory))
 $smallModel = Join-Path $sourceModelRoot "models--Systran--faster-whisper-small"
+$rootLicense = Join-Path $workspace "LICENSE"
+
+if (-not (Test-Path $rootLicense -PathType Leaf) -and -not $AllowMissingRootLicense) {
+    throw "Root LICENSE is missing. The owner must approve the LiveSub source license before a redistributable build."
+}
+if (Test-Path $rootLicense -PathType Leaf) {
+    $rootLicenseText = [System.IO.File]::ReadAllText($rootLicense)
+    if ($rootLicenseText -notmatch '(?m)^MIT License\s*$' -or
+        $rootLicenseText -notmatch 'Permission is hereby granted, free of charge') {
+        throw "Root LICENSE does not contain the expected canonical MIT grant declared by Cargo.toml."
+    }
+}
+
+# Rebuild with machine-local source paths remapped before staging. This avoids
+# copying a stale executable and prevents the release binary from exposing the
+# build user's profile/workspace paths.
+& (Join-Path $workspace "scripts\build-release.ps1")
+if ($LASTEXITCODE -ne 0) { throw "Could not build the release executable" }
 
 if (-not (Test-Path (Join-Path $workspace "target\release\livesub.exe") -PathType Leaf)) {
-    throw "Release executable is missing. Run cargo build --release first."
+    throw "Release executable is missing after the release build."
 }
 if (-not (Test-Path $smallModel -PathType Container)) {
     throw "The bundled small model is missing: $smallModel"
@@ -37,6 +56,9 @@ if (Test-Path $payload) {
 New-Item -ItemType Directory -Path $payloadPackages -Force | Out-Null
 Copy-Item (Join-Path $workspace "target\release\livesub.exe") $payload
 Copy-Item (Join-Path $workspace "README.md") $payload
+if (Test-Path $rootLicense -PathType Leaf) {
+    Copy-Item $rootLicense $payload
+}
 New-Item -ItemType Directory -Path (Join-Path $payload "ai_worker") -Force | Out-Null
 $workerFiles = @(
     "__init__.py",
@@ -66,15 +88,43 @@ if (-not $pathLines.Contains("..")) {
     $pathLines.Insert($siteIndex, "..")
     [System.IO.File]::WriteAllLines($pathConfiguration.FullName, $pathLines)
 }
-& $sourcePython -m pip install --disable-pip-version-check --no-compile --target $payloadPackages `
+& $sourcePython -m pip install --disable-pip-version-check --no-compile --no-deps --target $payloadPackages `
     -r (Join-Path $workspace "ai_worker\requirements-windows-runtime.txt")
 if ($LASTEXITCODE -ne 0) { throw "Could not assemble the private Python runtime" }
+
+# LiveSub always gives faster-whisper decoded float32 PCM arrays from WASAPI.
+# Make PyAV optional so the consumer payload does not carry an unused FFmpeg
+# and codec stack. File/media decoding remains intentionally unsupported by
+# the private worker runtime.
+$fasterWhisperAudio = Join-Path $payloadPackages "faster_whisper\audio.py"
+$audioSource = [System.IO.File]::ReadAllText($fasterWhisperAudio)
+$audioSource = $audioSource -replace "(?m)^import av\r?\n", @'
+try:
+    import av
+except ModuleNotFoundError:
+    av = None  # LiveSub passes decoded PCM; file decoding is not packaged.
+'@
+[System.IO.File]::WriteAllText($fasterWhisperAudio, $audioSource)
+
+# pip --target emits console launchers for dependency tools. They are not used
+# by LiveSub and unnecessarily widen the executable surface of the installer.
+$consoleLaunchers = Join-Path $payloadPackages "bin"
+if (Test-Path $consoleLaunchers -PathType Container) {
+    Remove-Item -LiteralPath $consoleLaunchers -Recurse -Force
+}
+
+# Copied worker directories can contain development bytecode from local test
+# runs. It is never required by the private runtime and must not ship.
+Get-ChildItem -LiteralPath $payload -Recurse -Directory -Filter "__pycache__" |
+    Remove-Item -Recurse -Force
+Get-ChildItem -LiteralPath $payload -Recurse -File -Include "*.pyc", "*.pyo" |
+    Remove-Item -Force
 
 # Catch missing source modules and signing dependencies before producing an
 # installer. This runs from the exact private runtime tree that will ship.
 Push-Location $payload
 try {
-    & (Join-Path $payloadPython "python.exe") -c "import ai_worker.worker, ai_worker.language_id, ai_worker.language_packs; from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey"
+    & (Join-Path $payloadPython "python.exe") -c "import ai_worker.worker, ai_worker.language_id, ai_worker.language_packs, faster_whisper; from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey; assert faster_whisper.audio.av is None"
     if ($LASTEXITCODE -ne 0) { throw "Packaged inference/security import smoke test failed" }
 } finally {
     Pop-Location
@@ -83,18 +133,48 @@ try {
 New-Item -ItemType Directory -Path (Join-Path $payload "models") -Force | Out-Null
 Copy-Item $smallModel (Join-Path $payload "models") -Recurse
 
+$buildCommit = (& git -C $workspace rev-parse HEAD).Trim()
+if ($LASTEXITCODE -ne 0 -or $buildCommit -notmatch '^[0-9a-f]{40}$') {
+    throw "Could not record the source commit"
+}
+$buildTimestamp = [DateTime]::UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ")
+$distributionClearance = if (Test-Path $rootLicense -PathType Leaf) {
+    "Root application license included"
+} else {
+    "BLOCKED - root application LICENSE missing; engineering validation only"
+}
 $buildInfo = @(
     "LiveSub 0.1.0",
+    "Build commit: $buildCommit",
+    "Build timestamp (UTC): $buildTimestamp",
+    "Python: 3.12.10 embeddable x64",
     "Model: faster-whisper small",
+    "Model revision: 536b0662742c02347bc0e980a01041f333bce120",
+    "Distribution clearance: $distributionClearance",
     "Inference: CUDA/float16 AUTO with CPU/int8 fallback",
     "Audio: Windows WASAPI loopback",
     "Privacy: local processing"
 ) -join [Environment]::NewLine
 [System.IO.File]::WriteAllText((Join-Path $payload "BUILD-INFO.txt"), $buildInfo)
 
+& $sourcePython (Join-Path $workspace "tools\collect_release_licenses.py") --payload $payload
+if ($LASTEXITCODE -ne 0) { throw "Could not collect the release license bundle" }
+
+& $sourcePython (Join-Path $workspace "tools\audit_release_payload.py") `
+    --payload $payload --report (Join-Path $workspace "release\payload-audit-v0.1.0-preview.json")
+if ($LASTEXITCODE -ne 0) { throw "Release payload security/privacy audit failed" }
+
 & $InnoCompiler "/DPayloadDir=$payload" "/DOutputDir=$dist" (Join-Path $workspace "installer\LiveSub.iss")
 if ($LASTEXITCODE -ne 0) { throw "Inno Setup compilation failed" }
 
 $installer = Join-Path $dist "LiveSub-Setup.exe"
 if (-not (Test-Path $installer -PathType Leaf)) { throw "Installer output is missing" }
+$installerHash = (Get-FileHash -LiteralPath $installer -Algorithm SHA256).Hash.ToLowerInvariant()
+[System.IO.File]::WriteAllText(
+    (Join-Path $workspace "release\LiveSub-Setup.exe.sha256"),
+    "$installerHash  LiveSub-Setup.exe$([Environment]::NewLine)"
+)
+& $sourcePython (Join-Path $workspace "tools\generate_release_sbom.py") `
+    --payload $payload --installer $installer --output-dir (Join-Path $workspace "release")
+if ($LASTEXITCODE -ne 0) { throw "Could not generate the release SBOM" }
 Get-Item $installer | Select-Object FullName, Length, LastWriteTime

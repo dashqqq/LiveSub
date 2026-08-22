@@ -1,29 +1,51 @@
 # LiveSub release process
 
-Application releases and future Language Pack releases are separate. A small application update must not force users to redownload unrelated model weights.
+Application releases and future Language Pack releases are separate. A small
+application update must not force users to redownload unrelated model weights.
 
 ## Current public status
 
-Version `0.1.0` is reserved for a **Preview** pre-release. The current engineering verdict is **ACCURACY-FIRST RELEASE: NOT READY**. Do not create `v1.0.0`, label this build stable, or publish an unreviewed binary automatically from a tag.
+Version `0.1.0` is reserved for a **Preview** pre-release. The current
+engineering verdict is **ACCURACY-FIRST RELEASE: NOT READY**. Do not create
+`v1.0.0`, label this build stable, or publish an unreviewed binary automatically
+from a tag.
 
-The installer is prepared locally, but public binary release is blocked until:
+The installer is being rebuilt from reviewed source, but public binary release
+is blocked until:
 
-1. the project owner supplies/approves the root source license (Cargo metadata currently says MIT, but no `LICENSE` file exists);
-2. Inno Setup commercial-use status is resolved for the actual release process;
-3. bundled model, Python, native library, media/codec, CUDA, and notice obligations are reviewed;
+1. the project owner supplies or approves the root source license
+   (`Cargo.toml` currently says MIT, but no `LICENSE` file exists);
+2. the final rebuilt payload passes the documented dependency, model, native
+   runtime, notice, private-data, and security checks;
+3. the Preview smoke gate passes for every language claimed in the release;
 4. the release asset and checksum are revalidated immediately before upload.
 
-Code signing, full accuracy certification, long-run testing, and repository-absent clean-machine certification remain stable-release gates. An honest pre-release may disclose those open validation gates after legal redistribution clearance.
+Code signing, full accuracy certification, long-run testing, and
+repository-absent clean-machine certification remain stable-release gates. An
+honest pre-release may disclose those open validation gates after legal
+redistribution clearance.
 
 ## Installer-tooling review
 
-The current packaging script invokes Inno Setup. The compiler used during the reviewed build identified itself as a non-commercial installation. Inno Setup’s official pages ask commercial users to purchase a license and describe commercial licensing terms:
+The packaging script invokes Inno Setup 6.7.3. Its exact installed
+`license.txt` was preserved in
+`licenses/native/Inno-Setup-6.7.3.txt`. That license permits use for any
+purpose, including commercial applications, and permits redistribution subject
+to its stated conditions. The generated Setup executable may therefore be
+distributed under those terms.
+
+Inno Setup's official site separately asks commercial users to purchase a
+license. That is recorded as a commercial support/business action rather than
+being misrepresented as a prohibition in the actual copyright license:
 
 - [Inno Setup overview](https://jrsoftware.org/isinfo.php)
-- [Commercial licenses](https://jrsoftware.org/isorder.php)
-- [License purchase terms](https://jrsoftware.org/isorder-terms.php)
+- [Purchase and support](https://jrsoftware.org/ishelp/topic_purchase.htm)
 
-Those upstream statements do not by themselves establish LiveSub’s legal clearance. Before a commercial public release, the owner must document the appropriate Inno Setup license/approval and rebuild the artifact with the approved tooling. Do not claim clearance based only on the installer compiling successfully.
+This finding clears the current Preview installer tooling with its notice. A
+future commercial owner should still document its purchase/support decision.
+See the payload-specific
+[redistribution clearance](../release/redistribution-clearance-v0.1.0-preview.md)
+for the distinct application, model, Python, Intel, NVIDIA, and other terms.
 
 ## Required release gates
 
@@ -46,26 +68,45 @@ Those upstream statements do not by themselves establish LiveSub’s legal clear
 
 1. Run the commands in [development.md](development.md).
 2. Run real WASAPI, media, and overlay checks appropriate to the changed scope.
-3. Review the staged Git diff and scan exactly the staged publication set for secrets and private paths.
-4. Build `dist/LiveSub-Setup.exe` from the reviewed commit.
-5. Install into an isolated location and run packaged inference/import smoke tests.
-6. Recalculate SHA-256 with `Get-FileHash -Algorithm SHA256 .\dist\LiveSub-Setup.exe` and update the checksum asset.
+3. Review the staged Git diff and scan exactly the staged publication set for
+   secrets and private paths.
+4. Build `dist/LiveSub-Setup.exe` from the reviewed commit. The packaging script
+   collects notices, audits the staged payload, generates the checksum, and
+   emits both human-readable and CycloneDX SBOMs.
+5. Install into an isolated location and run packaged inference/import smoke
+   tests.
+6. Recalculate SHA-256 with
+   `Get-FileHash -Algorithm SHA256 .\dist\LiveSub-Setup.exe` and confirm the
+   checksum asset generated by the packaging script.
 7. Confirm the checksum file and installer size against the final artifact.
 8. Create annotated tag `v0.1.0` only after the exact commit is approved.
-9. Create a **draft pre-release** named **LiveSub v0.1.0 Preview**.
-10. Upload `LiveSub-Setup.exe` and `LiveSub-Setup.exe.sha256`; never add the executable to Git history.
-11. Verify the uploaded asset size and checksum, all release links, release notes, and pre-release flag.
+9. Use the **draft pre-release** named **LiveSub v0.1.0 Preview**.
+10. Upload `LiveSub-Setup.exe`, `LiveSub-Setup.exe.sha256`, and
+    `SBOM-v0.1.0-preview.json`; never add the executable to Git history.
+11. Verify the uploaded asset size and checksum, all release links, release
+    notes, and pre-release flag.
 12. Publish only after manual approval.
 
-Tagging and publishing are deliberately not automated merely because a tag exists. A future workflow may build, test, and package an artifact, but release promotion must remain gated by accuracy, security, licensing, and clean-machine evidence.
+Tagging and publishing are deliberately not automated merely because a tag
+exists. A future workflow may build, test, and package an artifact, but release
+promotion must remain gated by accuracy, security, licensing, and clean-machine
+evidence.
+
+The future Authenticode approach and unsigned Preview policy are documented in
+[code-signing.md](code-signing.md).
 
 ## Rollback
 
-Do not overwrite release assets in place. If a Preview is invalid, mark it clearly, remove it from the preferred download path, and publish a corrected version/tag. Keep previous known-good Language Packs until candidates pass integrity, accuracy, latency, stability, and hardware acceptance.
+Do not overwrite release assets in place. If a Preview is invalid, mark it
+clearly, remove it from the preferred download path, and publish a corrected
+version/tag. Keep previous known-good Language Packs until candidates pass
+integrity, accuracy, latency, stability, and hardware acceptance.
 
 ## Repository metadata
 
-- **Description:** Accuracy-first live English subtitles for Windows system audio. Russian, Japanese and Hindi.
-- **Topics:** `live-subtitles`, `speech-recognition`, `translation`, `windows`, `asr`, `accessibility`, `real-time`, `russian`, `japanese`, `hindi`
+- **Description:** Accuracy-first live English subtitles for Windows system
+  audio. Russian, Japanese and Hindi.
+- **Topics:** `live-subtitles`, `speech-recognition`, `translation`, `windows`,
+  `asr`, `accessibility`, `real-time`, `russian`, `japanese`, `hindi`
 - **Website:** leave empty until an official site exists.
 - **Private vulnerability reporting:** enabled.

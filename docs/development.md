@@ -66,13 +66,33 @@ Do not enable remote model code in the consumer process. Candidate models must b
 ## Package engineering build
 
 ```powershell
-cargo build --release
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\package-windows.ps1 -PythonPath python -ModelDirectory models
 ```
 
-The packaging script assembles a private Python runtime, runs packaged import/security smoke tests, copies the pinned small model, and invokes Inno Setup. It writes `dist/LiveSub-Setup.exe`, which is ignored by Git and belongs in GitHub Releases only.
+The packaging script invokes `scripts/build-release.ps1` itself. That release
+build remaps machine-local workspace and profile paths before compiling the
+binary; do not substitute a stale `target\release\livesub.exe`.
 
-Do not publicly redistribute the generated installer until the source-license inconsistency, Inno Setup commercial-use status, bundled dependency/model licenses, and required notices have been cleared. See [release-process.md](release-process.md).
+The packaging script assembles a private Python runtime, runs packaged
+import/security smoke tests, copies the pinned small model, collects the actual
+payload license texts, audits the staged files, and invokes Inno Setup. It
+writes `dist/LiveSub-Setup.exe`, which is ignored by Git and belongs in GitHub
+Releases only. It also writes the checksum, payload-audit report, and Preview
+SBOM under `release/`.
+
+The collector and SBOM generator can also be checked independently against an
+already staged payload:
+
+```powershell
+python .\tools\collect_release_licenses.py --payload .\dist\payload
+python .\tools\audit_release_payload.py --payload .\dist\payload --report .\release\payload-audit-v0.1.0-preview.json
+python .\tools\generate_release_sbom.py --payload .\dist\payload --installer .\dist\LiveSub-Setup.exe --output-dir .\release
+```
+
+Do not publicly redistribute the generated installer until the root LiveSub
+source-license grant, final payload audit, bundled dependency/model notices,
+and Preview smoke gates are cleared. See
+[release-process.md](release-process.md).
 
 ## Code and review expectations
 

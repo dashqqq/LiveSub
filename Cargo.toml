@@ -36,6 +36,9 @@ windows = { version = "0.61", features = [
 [dev-dependencies]
 approx = "0.5"
 
+[build-dependencies]
+winres = "0.1"
+
 [profile.release]
 lto = "thin"
 codegen-units = 1
