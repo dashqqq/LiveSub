@@ -6,7 +6,7 @@
 
 **Accuracy-first live English subtitles for audio playing on your Windows PC.**
 
-[Windows releases](https://github.com/dashqqq/LiveSub/releases) · [Installation](docs/installation.md) · [Report a problem](https://github.com/dashqqq/LiveSub/issues)
+[**Download LiveSub for Windows**](https://github.com/dashqqq/LiveSub/releases/tag/v0.1.0) · [Installation](docs/installation.md) · [Report a problem](https://github.com/dashqqq/LiveSub/issues)
 
 **Preview** — core live translation works, while formal accuracy certification, extended validation, and production signing are still in progress.
 
@@ -18,9 +18,11 @@ LiveSub listens to Windows system audio, detects supported spoken languages, and
 
 ## Download
 
-The official Windows installer will be distributed through [GitHub Releases](https://github.com/dashqqq/LiveSub/releases). Look for the **LiveSub Preview** pre-release and its `LiveSub-Setup.exe` asset.
+[**Download LiveSub v0.1.0 Preview for Windows**](https://github.com/dashqqq/LiveSub/releases/tag/v0.1.0)
 
-> **Release notice:** the current Preview installer is unsigned and is not yet publicly posted while installer and bundled-component redistribution review is completed. When it is published, Windows SmartScreen may show an “Unknown publisher” warning. Code signing is planned before a stable release. Never disable Windows security to install LiveSub.
+Download `LiveSub-Setup.exe` and `LiveSub-Setup.exe.sha256` from the release page. The reviewed installer is 1,453,494,708 bytes and has SHA-256 `be81ef997f4a2e467e68d4d651481b73a24b8dacdaf5494c184f3e1df9e724a5`.
+
+> **Preview notice:** this installer is currently unsigned. Windows may show an “Unknown publisher” or SmartScreen warning. Code signing is planned before a stable release. Never disable Windows security to install LiveSub.
 
 The installer is designed to include the application, private inference runtime, default speech model, and required native libraries. End users should not need to install Python, Node.js, Rust, FFmpeg, the CUDA Toolkit, or development tools manually.
 
@@ -99,13 +101,13 @@ Minimum and recommended RAM, broader GPU/driver compatibility, and sustained CPU
 
 ## Installation
 
-1. Open [Releases](https://github.com/dashqqq/LiveSub/releases).
-2. Choose the latest **LiveSub Preview** pre-release.
+1. Open the [LiveSub v0.1.0 Preview release](https://github.com/dashqqq/LiveSub/releases/tag/v0.1.0).
+2. Confirm that GitHub marks it as a **Pre-release**.
 3. Download `LiveSub-Setup.exe` and its `.sha256` file.
 4. Verify the checksum, then run the installer.
 5. Launch **LiveSub** from the Start menu.
 
-Public installer publication is currently pending the release review described above. Detailed steps and checksum instructions are in [docs/installation.md](docs/installation.md).
+Detailed installation and checksum-verification steps are in [docs/installation.md](docs/installation.md).
 
 ## How to use
 
@@ -142,14 +144,14 @@ The Language Library and consumer installation flow are not released yet. The re
 - Per-language production routes have not yet been selected from the full benchmark matrix.
 - The consumer Language Library, fourth-language installation proof, signed registry, and rollback flow are incomplete.
 - Thirty-minute per-language soak tests and repository-absent clean-machine certification remain open.
-- The installer is unsigned, and public redistribution review for installer tooling and bundled components is unresolved.
+- The installer is unsigned, so Windows may show an unknown-publisher or SmartScreen warning.
 - Hardware guidance beyond the tested development machine is still being expanded.
 
 This engineering verdict remains **ACCURACY-FIRST RELEASE: NOT READY**. “Preview” describes functional software under evaluation, not a stable or certified release.
 
 ## Roadmap
 
-**Available in the current engineering build**
+**Available in v0.1.0 Preview**
 
 - Windows WASAPI system-audio capture
 - Russian, Japanese, Hindi, and English processing paths
@@ -162,7 +164,7 @@ This engineering verdict remains **ACCURACY-FIRST RELEASE: NOT READY**. “Previ
 - Complete human-reviewed golden corpora and per-language model selection
 - Finish Hindi/Hinglish and noisy real-stream acceptance testing
 - Prove a fourth-language install, update, and rollback end to end
-- Complete redistribution/licensing review and code-sign the installer
+- Code-sign the installer and expand hardware/driver compatibility validation
 - Complete long-run and repository-absent clean-machine certification
 
 **Later**

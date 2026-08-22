@@ -48,10 +48,11 @@ The historical pre-audit and missing-license engineering installers must not be 
 - Rust/Python suites, CPU/int8 and CUDA/float16 real inference, real WASAPI loopback, Russian/Japanese/Hindi/English paths, native overlay, isolated install, official branding, and clean uninstall passed on the final candidate.
 - The final checksum and CycloneDX 1.6 SBOM were generated from the rebuilt artifact; 199 components are recorded with zero `BLOCKED`, `UNKNOWN`, or `OWNER REVIEW REQUIRED` bundled statuses.
 
-## Remaining conditions before publication
+## Publication verification
 
-1. Create the immutable `v0.1.0` tag at build commit `5224981bf622ca146663c3476cfdef576a5535ce`.
-2. Upload only the cleared artifact, checksum, and SBOM to the existing draft and publish it as a pre-release.
-3. Download the public asset, match its checksum to the reviewed local artifact, install it, repeat the public WASAPI/Russian smoke, and uninstall it.
+- The immutable `v0.1.0` tag points to build commit `5224981bf622ca146663c3476cfdef576a5535ce`.
+- The cleared installer, checksum, and CycloneDX SBOM are public on the [LiveSub v0.1.0 Preview pre-release](https://github.com/dashqqq/LiveSub/releases/tag/v0.1.0).
+- An anonymous download of the public installer was 1,453,494,708 bytes and matched both the published checksum and reviewed local artifact: SHA-256 `be81ef997f4a2e467e68d4d651481b73a24b8dacdaf5494c184f3e1df9e724a5`.
+- That public copy installed in an isolated location, opened the visible LiveSub desktop window, produced six finalized English subtitles from real Russian audio captured through WASAPI loopback with zero capture/inference queue drops, and uninstalled without a remaining LiveSub install directory, shortcut, Apps entry, service, scheduled task, or startup entry.
 
 Code signing and full accuracy certification remain separate Stable-release work and do not alter the redistribution decision above.

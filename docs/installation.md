@@ -1,15 +1,15 @@
 # Installing LiveSub Preview
 
-LiveSub is a 64-bit Windows desktop application. The public installer is intended to be distributed as a GitHub Release asset, not committed to the source repository.
+LiveSub is a 64-bit Windows desktop application. The public installer is distributed as a GitHub Release asset, not committed to the source repository.
 
 ## Availability
 
-Public Preview publication is currently pending redistribution/licensing review for the installer tooling and bundled runtime components. Once cleared, the release will appear on the [LiveSub Releases page](https://github.com/dashqqq/LiveSub/releases) as a pre-release named **LiveSub v0.1.0 Preview**.
+**LiveSub v0.1.0 Preview is publicly available** on its [GitHub pre-release page](https://github.com/dashqqq/LiveSub/releases/tag/v0.1.0). Use that version-specific page during the Preview phase; GitHub's `/releases/latest` route is reserved for stable releases and may not select a pre-release.
 
 ## Install
 
-1. Open the [Releases page](https://github.com/dashqqq/LiveSub/releases).
-2. Open the latest LiveSub Preview pre-release.
+1. Open the [LiveSub v0.1.0 Preview release](https://github.com/dashqqq/LiveSub/releases/tag/v0.1.0).
+2. Confirm that the release is marked **Pre-release**.
 3. Download `LiveSub-Setup.exe` and `LiveSub-Setup.exe.sha256`.
 4. Verify the checksum using the command below.
 5. Run `LiveSub-Setup.exe` and complete the per-user installation.
@@ -43,7 +43,7 @@ It is designed so an end user does not install Python, Node.js, Rust, FFmpeg, th
 
 ## Storage and connectivity
 
-The reviewed artifact is 1,473,166,025 bytes. Its measured installed payload is approximately 2.67 GiB. Leave additional temporary space for installer extraction.
+The reviewed v0.1.0 Preview artifact is 1,453,494,708 bytes with SHA-256 `be81ef997f4a2e467e68d4d651481b73a24b8dacdaf5494c184f3e1df9e724a5`. Its measured installed payload is approximately 2.67 GiB. Leave additional temporary space for installer extraction.
 
 The self-contained Preview build does not need an internet connection for normal translation after installation. Downloading the installer itself requires internet access. Future Language Packs may be separate verified downloads.
 

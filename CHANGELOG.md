@@ -9,7 +9,7 @@ All notable user-facing LiveSub changes will be recorded here. The project uses 
 - Code signing for stable distribution.
 - Extended long-run and repository-absent clean-machine certification.
 
-## [0.1.0-preview] - Unreleased
+## [0.1.0-preview] - 2026-08-23
 
 ### Added
 
@@ -27,4 +27,4 @@ All notable user-facing LiveSub changes will be recorded here. The project uses 
 
 ### Preview notice
 
-This entry describes the prepared engineering Preview. It is not a stable release, and a public installer has not yet been published.
+This is a public pre-release, not a stable or accuracy-certified release. The unsigned Windows installer is available from the [LiveSub v0.1.0 Preview release](https://github.com/dashqqq/LiveSub/releases/tag/v0.1.0).

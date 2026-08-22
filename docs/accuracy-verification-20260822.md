@@ -1,5 +1,12 @@
 # Accuracy campaign verification — 2026-08-22
 
+> **Historical record:** this document describes a superseded pre-clearance
+> engineering artifact and preserves its original measurements. It is not the
+> public v0.1.0 installer. See the
+> [v0.1.0 redistribution record](../release/redistribution-clearance-v0.1.0-preview.md)
+> and [Preview release](https://github.com/dashqqq/LiveSub/releases/tag/v0.1.0)
+> for the published artifact, checksum, and current clearance.
+
 ## Final tested setup artifact
 
 - Path: `dist/LiveSub-Setup.exe`

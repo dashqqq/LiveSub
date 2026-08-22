@@ -5,18 +5,20 @@ application update must not force users to redownload unrelated model weights.
 
 ## Current public status
 
-Version `0.1.0` is reserved for a **Preview** pre-release. The current
-engineering verdict is **ACCURACY-FIRST RELEASE: NOT READY**. Do not create
-`v1.0.0`, label this build stable, or publish an unreviewed binary automatically
-from a tag.
+Version `0.1.0` was published on 2026-08-23 as a **Preview** pre-release. The
+current engineering verdict remains **ACCURACY-FIRST RELEASE: NOT READY**. Do
+not create `v1.0.0`, label this build stable, or publish an unreviewed binary
+automatically from a tag.
 
-The owner-approved root MIT grant now matches `Cargo.toml`, and third-party
-redistribution review is clear. Public binary release remains gated until:
+The owner-approved root MIT grant matches `Cargo.toml`, third-party
+redistribution review is clear, and the published Preview passed:
 
-1. the final license-bearing and branding-bearing payload passes the documented dependency, model, native
+1. the final license-bearing and branding-bearing payload's documented dependency, model, native
    runtime, notice, private-data, and security checks;
-2. the Preview smoke gate passes for every language claimed in the release;
-3. the release asset and checksum are revalidated immediately before upload.
+2. the Preview smoke gate for every language claimed in the release;
+3. release-asset size and digest verification before publication; and
+4. anonymous public download, checksum comparison, isolated install, real
+   WASAPI/Russian subtitle smoke, visible application launch, and clean uninstall.
 
 Code signing, full accuracy certification, long-run testing, and
 repository-absent clean-machine certification remain stable-release gates. An
@@ -84,6 +86,10 @@ for the distinct application, model, Python, Intel, NVIDIA, and other terms.
 11. Verify the uploaded asset size and checksum, all release links, release
     notes, and pre-release flag.
 12. Publish only after manual approval.
+13. Download the asset anonymously from the public release and require its hash
+    to match both the published checksum and the reviewed local artifact.
+14. Install that downloaded copy, launch it, repeat the real WASAPI smoke, and
+    uninstall it before declaring the Preview published.
 
 Tagging and publishing are deliberately not automated merely because a tag
 exists. A future workflow may build, test, and package an artifact, but release
