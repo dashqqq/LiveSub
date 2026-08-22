@@ -27,6 +27,7 @@ SetupLogging=yes
 CloseApplications=yes
 RestartApplications=no
 WizardStyle=modern
+SetupIconFile=..\assets\branding\livesub.ico
 UninstallDisplayIcon={app}\livesub.exe
 UninstallDisplayName=LiveSub
 VersionInfoVersion={#AppVersion}.0

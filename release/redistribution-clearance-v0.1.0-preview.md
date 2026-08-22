@@ -6,17 +6,17 @@ Scope: the rebuilt Windows installer produced from `scripts/package-windows.ps1`
 
 ## Current decision
 
-**Installer redistribution: BLOCKED pending owner identity/license confirmation.**
+**Installer redistribution: CLEARED for the v0.1.0 Preview, subject to rebuilding and passing the final artifact smoke gate.**
 
-The third-party payload can be rebuilt into a notice-complete distributable form. The remaining release-blocking item is the LiveSub application itself: `Cargo.toml` says MIT, but the repository has no root `LICENSE`, and available history identifies only the account name `dashqqq`. The owner must provide or approve the exact copyright-holder text. No legal name or company has been invented.
+The project owner explicitly authorized LiveSub's application source under MIT with the exact copyright line `Copyright (c) 2026 AKASH DEEP BARUAH`. The canonical root `LICENSE` now matches `Cargo.toml`. This grant applies only to LiveSub's own source; every bundled runtime, model, library, and installer component remains under the separate terms recorded below and in the SBOM.
 
-The historical pre-audit installer must not be uploaded. It has been superseded locally by an engineering-only rebuild from commit `151bdd360239ed3dc8e0a4fe32e7146f8b5f8694`. The rebuilt payload removes PyAV/FFmpeg, carries the reviewed notices, records its source commit, passes the release payload audit and explicitly embeds `Distribution clearance: BLOCKED - root application LICENSE missing; engineering validation only`. This blocked artifact is evidence for the audit; it is not approved for upload.
+The historical pre-audit and missing-license engineering installers must not be uploaded. The release candidate must be rebuilt without `-AllowMissingRootLicense` from the license-bearing, branding-bearing commit so the root grant, notices, icon, SBOM, checksum, and build provenance all describe the same artifact.
 
 ## Clearance matrix
 
 | Component | License | Redistribution | Commercial use | Attribution / inclusion | Status |
 | --- | --- | --- | --- | --- | --- |
-| LiveSub application | Intended MIT per `Cargo.toml`; root grant incomplete | Owner has not supplied exact root license text | Not determined by public metadata | Add canonical root license with owner-approved copyright line | **OWNER REVIEW REQUIRED** |
+| LiveSub application | MIT | Permitted by the owner-approved canonical root grant | Permitted | Include the root `LICENSE`; do not imply that it relicenses third-party payload components | **CLEARED** |
 | CPython 3.12.10 embeddable x64 | PSF-2.0 plus incorporated notices | Expressly permitted subject to included terms | Permitted | Preserve `python/LICENSE.txt`; comply with Microsoft Distributable Code restrictions | **CLEARED WITH NOTICE** |
 | Microsoft VC runtime 14.42.34438.0 in CPython | Microsoft Distributable Code conditions incorporated into Python Windows license | Windows local deployment permitted; Python notice expressly covers redistribution of its Windows binary build | Permitted under the terms | Do not remove notices, imply endorsement, target non-Windows platforms, or distribute in malicious/deceptive software | **CLEARED WITH NOTICE** |
 | Microsoft VC runtime 14.40.33810.0 in NumPy wheel | Microsoft Distributable Code terms | Unmodified Windows runtime supplied by the wheel | Permitted under the terms | Preserve applicable Microsoft restrictions/notices | **CLEARED WITH NOTICE** |
@@ -50,9 +50,8 @@ The historical pre-audit installer must not be uploaded. It has been superseded 
 
 ## Remaining conditions before publication
 
-1. Owner supplies or approves the exact LiveSub root-license copyright line.
-2. Add the canonical root `LICENSE` without changing third-party licensing.
-3. Rebuild without `-AllowMissingRootLicense` from the license-bearing commit and repeat the checksum, payload, install/uninstall, and smoke gates.
-4. Create the immutable `v0.1.0` tag, upload only the cleared artifact/checksum/SBOM to the existing draft, and publish it as a pre-release.
+1. Rebuild without `-AllowMissingRootLicense` from the license-bearing, branding-bearing commit and repeat the checksum, payload, install/uninstall, and smoke gates.
+2. Confirm the rebuilt SBOM has zero `BLOCKED`, `UNKNOWN`, or `OWNER REVIEW REQUIRED` bundled components.
+3. Create the immutable `v0.1.0` tag, upload only the cleared artifact/checksum/SBOM to the existing draft, and publish it as a pre-release.
 
 Code signing and full accuracy certification remain separate Stable-release work and do not alter the redistribution decision above.

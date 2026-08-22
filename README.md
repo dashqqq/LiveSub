@@ -1,12 +1,14 @@
 <div align=center>
 
+<img src="assets/branding/livesub-logo-header.png" alt="LiveSub" width="600">
+
 # LiveSub
 
 **Accuracy-first live English subtitles for audio playing on your Windows PC.**
 
 [Windows releases](https://github.com/dashqqq/LiveSub/releases) · [Installation](docs/installation.md) · [Report a problem](https://github.com/dashqqq/LiveSub/issues)
 
-**Preview** — core live translation works, while accuracy certification, production signing, and release licensing review are still in progress.
+**Preview** — core live translation works, while formal accuracy certification, extended validation, and production signing are still in progress.
 
 </div>
 
@@ -185,6 +187,6 @@ Do not post private, copyrighted, or personally identifying audio in a public is
 
 ## License and acknowledgements
 
-The source manifest currently declares MIT, but a root license text has not yet been supplied by the project owner. Until that inconsistency is resolved, do not assume a public source-code license grant. The packaged application also depends on third-party software and model licenses that are being reviewed before public binary distribution.
+LiveSub's application source is available under the [MIT License](LICENSE), copyright (c) 2026 AKASH DEEP BARUAH. That grant applies to LiveSub's own source, not to bundled third-party software, runtimes, or model weights, which remain governed by their individual upstream terms.
 
 See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for the current attribution inventory and [docs/release-process.md](docs/release-process.md) for release gates.

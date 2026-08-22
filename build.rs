@@ -3,6 +3,7 @@ fn main() {
     {
         let mut resource = winres::WindowsResource::new();
         resource
+            .set_icon("assets\\branding\\livesub.ico")
             .set("ProductName", "LiveSub")
             .set("FileDescription", "LiveSub")
             .set("FileVersion", "0.1.0.0")
@@ -11,6 +12,7 @@ fn main() {
             .set("OriginalFilename", "livesub.exe")
             .set_version_info(winres::VersionInfo::FILEVERSION, 0x0000_0001_0000_0000)
             .set_version_info(winres::VersionInfo::PRODUCTVERSION, 0x0000_0001_0000_0000);
+        println!("cargo:rerun-if-changed=assets/branding/livesub.ico");
         resource
             .compile()
             .expect("failed to compile Windows version resource");

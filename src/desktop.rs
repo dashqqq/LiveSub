@@ -17,6 +17,17 @@ use crate::platform::windows::{
 use crate::runtime::{AppStatus, Diagnostics, RuntimeConfig, RuntimeEvent, RuntimeHandle};
 use crate::subtitle::{SubtitleSegment, SubtitleUpdate};
 
+const BRAND_ICON_RGBA: &[u8] = include_bytes!("../assets/branding/livesub-icon.rgba");
+
+fn brand_icon_data() -> egui::IconData {
+    debug_assert_eq!(BRAND_ICON_RGBA.len(), 256 * 256 * 4);
+    egui::IconData {
+        rgba: BRAND_ICON_RGBA.to_vec(),
+        width: 256,
+        height: 256,
+    }
+}
+
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 enum OverlayPreset {
     Cinema,
@@ -81,6 +92,7 @@ impl OverlayStyle {
 }
 
 pub struct LiveSubApp {
+    brand_icon: egui::TextureHandle,
     runtime: Option<RuntimeHandle>,
     stop_requested: bool,
     runtime_config: RuntimeConfig,
@@ -108,6 +120,11 @@ pub struct LiveSubApp {
 impl LiveSubApp {
     pub fn new(context: &eframe::CreationContext<'_>, start_immediately: bool) -> Self {
         configure_visuals(&context.egui_ctx);
+        let brand_icon = context.egui_ctx.load_texture(
+            "livesub-brand-icon",
+            egui::ColorImage::from_rgba_unmultiplied([256, 256], BRAND_ICON_RGBA),
+            egui::TextureOptions::LINEAR,
+        );
         #[cfg(windows)]
         let devices = WindowsAudioBackend.enumerate_devices().unwrap_or_default();
         #[cfg(not(windows))]
@@ -134,6 +151,7 @@ impl LiveSubApp {
         let monitor_selection = 0;
 
         let mut app = Self {
+            brand_icon,
             runtime: None,
             stop_requested: false,
             runtime_config: RuntimeConfig::from_environment(),
@@ -292,12 +310,20 @@ impl LiveSubApp {
             .show(ctx, |ui| {
                 ui.add_space(10.0);
                 ui.horizontal(|ui| {
-                    ui.label(
-                        RichText::new("LiveSub")
-                            .font(FontId::new(26.0, FontFamily::Proportional))
-                            .strong()
-                            .color(Color32::WHITE),
-                    );
+                    ui.image((self.brand_icon.id(), Vec2::splat(36.0)));
+                    ui.vertical(|ui| {
+                        ui.label(
+                            RichText::new("LiveSub")
+                                .font(FontId::new(26.0, FontFamily::Proportional))
+                                .strong()
+                                .color(Color32::WHITE),
+                        );
+                        ui.label(
+                            RichText::new("Accuracy-first English subtitles")
+                                .size(12.0)
+                                .color(Color32::from_rgb(151, 160, 180)),
+                        );
+                    });
                     ui.with_layout(Layout::right_to_left(Align::Center), |ui| {
                         ui.label(
                             RichText::new("LOCAL PROCESSING")
@@ -306,11 +332,6 @@ impl LiveSubApp {
                         );
                     });
                 });
-                ui.label(
-                    RichText::new("Universal real-time English subtitles")
-                        .size(13.0)
-                        .color(Color32::from_rgb(151, 160, 180)),
-                );
                 ui.add_space(20.0);
 
                 Frame::new()
@@ -895,6 +916,7 @@ pub fn run(start_immediately: bool) -> eframe::Result<()> {
     let options = eframe::NativeOptions {
         viewport: ViewportBuilder::default()
             .with_title("LiveSub")
+            .with_icon(brand_icon_data())
             .with_inner_size([430.0, 570.0])
             .with_min_inner_size([390.0, 520.0])
             .with_resizable(true)

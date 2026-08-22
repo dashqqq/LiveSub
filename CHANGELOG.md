@@ -6,7 +6,7 @@ All notable user-facing LiveSub changes will be recorded here. The project uses 
 
 - Human-reviewed Russian, Japanese, and Hindi accuracy certification.
 - Production Language Library, signed registry, fourth-language proof, and rollback.
-- Code signing and full installer/bundled-component licensing clearance.
+- Code signing for stable distribution.
 - Extended long-run and repository-absent clean-machine certification.
 
 ## [0.1.0-preview] - Unreleased
@@ -22,7 +22,8 @@ All notable user-facing LiveSub changes will be recorded here. The project uses 
 - CUDA acceleration with CPU fallback and startup warm-up checks.
 - Bounded capture/inference/UI queues and developer diagnostics.
 - Accuracy benchmark harness, curated model registry schemas, and language-pack manifests.
-- Self-contained per-user Windows installer engineering build.
+- Official LiveSub logo and consistent application, window, shortcut, and installer icons.
+- Self-contained per-user Windows installer with bundled runtime, model, and required notices.
 
 ### Preview notice
 

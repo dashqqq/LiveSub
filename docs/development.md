@@ -89,9 +89,8 @@ python .\tools\audit_release_payload.py --payload .\dist\payload --report .\rele
 python .\tools\generate_release_sbom.py --payload .\dist\payload --installer .\dist\LiveSub-Setup.exe --output-dir .\release
 ```
 
-Do not publicly redistribute the generated installer until the root LiveSub
-source-license grant, final payload audit, bundled dependency/model notices,
-and Preview smoke gates are cleared. See
+Do not publicly redistribute the generated installer until the final payload
+audit, bundled dependency/model notices, and Preview smoke gates are cleared. See
 [release-process.md](release-process.md).
 
 ## Code and review expectations

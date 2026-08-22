@@ -10,15 +10,13 @@ engineering verdict is **ACCURACY-FIRST RELEASE: NOT READY**. Do not create
 `v1.0.0`, label this build stable, or publish an unreviewed binary automatically
 from a tag.
 
-The installer is being rebuilt from reviewed source, but public binary release
-is blocked until:
+The owner-approved root MIT grant now matches `Cargo.toml`, and third-party
+redistribution review is clear. Public binary release remains gated until:
 
-1. the project owner supplies or approves the root source license
-   (`Cargo.toml` currently says MIT, but no `LICENSE` file exists);
-2. the final rebuilt payload passes the documented dependency, model, native
+1. the final license-bearing and branding-bearing payload passes the documented dependency, model, native
    runtime, notice, private-data, and security checks;
-3. the Preview smoke gate passes for every language claimed in the release;
-4. the release asset and checksum are revalidated immediately before upload.
+2. the Preview smoke gate passes for every language claimed in the release;
+3. the release asset and checksum are revalidated immediately before upload.
 
 Code signing, full accuracy certification, long-run testing, and
 repository-absent clean-machine certification remain stable-release gates. An

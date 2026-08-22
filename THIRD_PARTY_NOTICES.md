@@ -6,7 +6,7 @@ This is an engineering compliance record, not legal advice. Third-party software
 
 ## LiveSub source-license status
 
-`Cargo.toml` declares MIT, but repository history identifies only the GitHub account `dashqqq`; it does not establish the legal copyright-holder text the owner wants in a root MIT license. A root `LICENSE` has therefore not been invented. The project owner must supply or approve the exact copyright line before the source-license inconsistency is cleared.
+LiveSub's own application source is licensed under the root [MIT License](LICENSE), copyright (c) 2026 AKASH DEEP BARUAH. That source-code grant is separate from the terms below: CPython remains under the PSF license and incorporated notices; Whisper, faster-whisper, and Silero remain under their upstream licenses; NVIDIA runtime components remain under NVIDIA redistribution terms; and every other bundled component remains governed by its recorded upstream license.
 
 ## Shipped model artifacts
 
