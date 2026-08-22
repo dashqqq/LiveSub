@@ -39,6 +39,9 @@ Qwen, IndicTrans2, OPUS/Marian, M2M100, NLLB and other registry candidates are n
 | NVIDIA NVRTC | 12.9.86 | NVIDIA SDK License Agreement | Named redistributables; accompany with supplied terms |
 | NVIDIA cuDNN | 9.24.0.43 runtime plus CTranslate2 compatibility DLL 9.10.2.21 | NVIDIA SDK License Agreement and cuDNN Supplement | Runtime `.dll` redistribution under the agreement; accompany with supplied terms |
 | Microsoft VC runtime | 14.42.34438.0 in CPython payload | Microsoft Distributable Code terms referenced by CPython | Windows-only, unmodified runtime distribution; preserve notices/restrictions |
+| Microsoft VC runtime in NumPy wheel | 14.40.33810.0 | Microsoft Distributable Code terms | Unmodified Windows runtime supplied by the wheel; preserve notices/restrictions |
+| OpenBLAS / LAPACK | OpenBLAS 0.3.34.0.0, dynamically bundled by NumPy 2.5.2 | BSD-3-Clause and BSD-3-Clause-Open-MPI | Preserve the NumPy wheel's complete binary-distribution notice |
+| GCC runtime code in NumPy OpenBLAS DLL | NumPy 2.5.2 wheel build | GPL-3.0-or-later WITH GCC-exception-3.1 | The Runtime Library Exception applies to the eligible compiled library; preserve the supplied GPL and exception text |
 | Inno Setup | 6.7.3 | Inno Setup License | Use, including commercial use, and generated installer distribution permitted under the license; acknowledgment appreciated, not required |
 
 The exact NVIDIA package license files are carried from each installed wheel. The CUDA 12.9 Attachment A identifies Windows `cublas.dll`, `cublasLt.dll`, `nvblas.dll`, `nvrtc.dll`, and `nvrtc-builtins.dll` (including versioned filename variants) as distributable. The current cuDNN supplement identifies runtime `.dll` files as distributable. LiveSub adds material application functionality and uses the libraries only through its inference runtime.
@@ -71,7 +74,7 @@ The SBOM enumerates every installed Python distribution from the payload's `*.di
 
 The rebuilt consumer payload intentionally excludes PyAV, FFmpeg, x264, x265 and the other media-codec DLLs previously pulled in by PyAV. LiveSub's worker receives decoded float32 PCM from WASAPI and does not use media-file decoding. PyTorch is also not bundled.
 
-No packaged dependency was classified as GPL, AGPL, SSPL, research-only, non-commercial-only or unknown after the payload rebuild. Certifi and tqdm carry MPL terms; their supplied license texts and unmodified source files are included. NVIDIA packages remain governed by their named proprietary redistribution agreements rather than being treated as open-source packages.
+No packaged component was classified as AGPL, SSPL, research-only, non-commercial-only or unknown after the payload rebuild. NumPy's OpenBLAS DLL incorporates eligible GCC runtime code under `GPL-3.0-or-later WITH GCC-exception-3.1`; the Runtime Library Exception permits this compiled use without imposing GPL terms on LiveSub, and the wheel's complete notice is included. Certifi and tqdm carry MPL terms; their supplied license texts and unmodified source files are included. NVIDIA packages remain governed by their named proprietary redistribution agreements rather than being treated as open-source packages.
 
 ## Rust crates
 

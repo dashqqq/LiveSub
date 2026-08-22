@@ -180,6 +180,9 @@ def manual_components(payload: Path, installer: Path) -> list[dict[str, Any]]:
     snapshot = assert_model(payload)
     vad = payload / "python" / "Lib" / "site-packages" / "faster_whisper" / "assets" / "silero_vad_v6.onnx"
     ctranslate = payload / "python" / "Lib" / "site-packages" / "ctranslate2"
+    numpy_libraries = payload / "python" / "Lib" / "site-packages" / "numpy.libs"
+    numpy_openblas = numpy_libraries / "libscipy_openblas64_-327b2e0bcffce2882e0dc04cdeb4eaa6.dll"
+    numpy_msvcp = numpy_libraries / "msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll"
     root_license = payload / "LICENSE"
     livesub_license = "MIT" if root_license.is_file() else "OWNER REVIEW REQUIRED: Cargo.toml says MIT; root LICENSE missing"
     livesub_evidence = "release payload/livesub.exe and root LICENSE" if root_license.is_file() else "release payload/livesub.exe; repository root LICENSE is absent"
@@ -238,6 +241,10 @@ def manual_components(payload: Path, installer: Path) -> list[dict[str, Any]]:
     ]
     native = [
         ("Microsoft Visual C++ Runtime", "14.42.34438.0", "Microsoft Visual C++ Runtime terms", "https://learn.microsoft.com/cpp/windows/redistributing-visual-cpp-files", payload / "python" / "vcruntime140.dll", "Microsoft Distributable Code in CPython 3.12.10 Windows build"),
+        ("Microsoft Visual C++ Runtime (NumPy wheel)", "14.40.33810.0", "Microsoft Visual C++ Runtime terms", "https://learn.microsoft.com/cpp/windows/redistributing-visual-cpp-files", numpy_msvcp, "Unmodified msvcp140 DLL supplied in the NumPy 2.5.2 Windows wheel"),
+        ("OpenBLAS", "0.3.34.0.0", "BSD-3-Clause", "https://github.com/OpenMathLib/OpenBLAS", numpy_openblas, "NumPy 2.5.2 show_config and wheel LICENSE.txt; dynamically bundled in numpy.libs"),
+        ("LAPACK in OpenBLAS", "OpenBLAS-0.3.34.0.0", "BSD-3-Clause-Open-MPI", "https://github.com/OpenMathLib/OpenBLAS", numpy_openblas, "NumPy 2.5.2 wheel LICENSE.txt identifies LAPACK bundled in the OpenBLAS DLL"),
+        ("GCC Runtime Library in OpenBLAS", "NumPy-2.5.2-wheel", "GPL-3.0-or-later WITH GCC-exception-3.1", "https://gcc.gnu.org/onlinedocs/libstdc++/manual/license.html", numpy_openblas, "NumPy 2.5.2 wheel LICENSE.txt identifies eligible GCC runtime code statically linked into the OpenBLAS DLL and supplies the Runtime Library Exception"),
         ("Intel OpenMP Runtime", "20250910", "Intel Simplified Software License", "https://www.intel.com/content/www/us/en/content-details/749362/intel-simplified-software-license-version-october-2022.html", ctranslate / "libiomp5md.dll", "CTranslate2 4.8.1 Windows wheel; Authenticode signer Intel Corporation"),
         ("Intel oneMKL", "2025.3.0.372", "Intel Simplified Software License", "https://www.intel.com/content/www/us/en/developer/articles/tool/onemkl-license-faq.html", ctranslate / "ctranslate2.dll", "Statically incorporated; pinned by CTranslate2 v4.8.1 Windows wheel build script"),
         ("NVIDIA cuDNN compatibility runtime", "9.10.2.21", "NVIDIA SDK License Agreement and cuDNN Supplement", "https://docs.nvidia.com/deeplearning/cudnn/backend/reference/eula.html", ctranslate / "cudnn64_9.dll", "CTranslate2 4.8.1 wheel compatibility DLL; Authenticode signer NVIDIA Corporation"),
@@ -394,6 +401,7 @@ def render_markdown(sbom: dict[str, Any], payload: Path, installer: Path) -> str
             "- PyTorch and external AI candidate weights are not bundled.",
             "- NVIDIA cuBLAS/cuBLASLt, NVRTC, and cuDNN runtime DLLs are bundled under NVIDIA's SDK distribution terms and require the supplied terms/notices to accompany the application.",
             "- Intel oneMKL code and the Intel OpenMP runtime arrive through the CTranslate2 wheel; the Intel Simplified Software License permits unmodified binary redistribution with its copyright and terms reproduced.",
+            "- NumPy 2.5.2 dynamically bundles OpenBLAS/LAPACK. Its OpenBLAS DLL also incorporates eligible GCC runtime code under GPL-3.0-or-later WITH GCC-exception-3.1; the exception permits this compiled use without imposing GPL terms on LiveSub, and the complete notice and exception are carried from the wheel.",
             "- CPython's included license expressly addresses redistribution of its Windows binary build and embedded Microsoft Distributable Code; its conditions are carried into the notice bundle.",
             root_license_conclusion,
             "",
