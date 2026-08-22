@@ -1,6 +1,6 @@
 # LiveSub v0.1.0 Preview redistribution clearance
 
-Reviewed: 2026-08-22
+Reviewed: 2026-08-23
 
 Scope: the rebuilt Windows installer produced from `scripts/package-windows.ps1`, not development dependencies or unbundled registry candidates. This is an engineering due-diligence record, not legal advice.
 
@@ -10,7 +10,7 @@ Scope: the rebuilt Windows installer produced from `scripts/package-windows.ps1`
 
 The third-party payload can be rebuilt into a notice-complete distributable form. The remaining release-blocking item is the LiveSub application itself: `Cargo.toml` says MIT, but the repository has no root `LICENSE`, and available history identifies only the account name `dashqqq`. The owner must provide or approve the exact copyright-holder text. No legal name or company has been invented.
 
-The current pre-audit installer must not be uploaded. Its obsolete PyAV/FFmpeg codec payload lacks the collected codec notices, its executable metadata is incomplete, and its build commit was not recorded. The packaging changes remove PyAV/FFmpeg and regenerate the installer from reviewed source.
+The historical pre-audit installer must not be uploaded. It has been superseded locally by an engineering-only rebuild from commit `151bdd360239ed3dc8e0a4fe32e7146f8b5f8694`. The rebuilt payload removes PyAV/FFmpeg, carries the reviewed notices, records its source commit, passes the release payload audit and explicitly embeds `Distribution clearance: BLOCKED - root application LICENSE missing; engineering validation only`. This blocked artifact is evidence for the audit; it is not approved for upload.
 
 ## Clearance matrix
 
@@ -40,14 +40,19 @@ The current pre-audit installer must not be uploaded. Its obsolete PyAV/FFmpeg c
 | PyTorch | Not applicable | Not shipped | Not applicable | None | **NOT BUNDLED** |
 | Qwen / IndicTrans2 / OPUS / Marian / M2M100 / NLLB weights | Candidate-specific terms | Registry metadata only; no weights shipped | Not applicable to this release | Audit independently before future inclusion | **NOT BUNDLED** |
 
-## Conditions before publication
+## Completed technical conditions
+
+- Reviewed packaging and compliance inputs are committed.
+- The engineering artifact contains no PyAV/FFmpeg/media-codec payload and carries 320 hash-verified notice files.
+- The payload audit passes with zero findings; tracked-source secret and machine-path scans are clean; Microsoft Defender reported no threats in the final local installer.
+- Rust/Python suites, CPU/int8 and CUDA/float16 warm-up, real WASAPI loopback, Russian/Japanese/Hindi translation routing, native overlay, isolated install and clean uninstall were exercised.
+- The final engineering checksum and CycloneDX 1.6 SBOM were generated from the rebuilt artifact.
+
+## Remaining conditions before publication
 
 1. Owner supplies or approves the exact LiveSub root-license copyright line.
-2. Add the root `LICENSE` without changing third-party licensing.
-3. Commit reviewed source and compliance inputs.
-4. Rebuild from that commit; verify PyAV/FFmpeg absence and bundled notices.
-5. Complete Preview smoke gates, secret/private-payload scan, install/uninstall test and binary scan.
-6. Generate final checksum/SBOM from the rebuilt artifact.
-7. Only then create the immutable `v0.1.0` tag, upload assets to the existing draft, and publish it as a pre-release.
+2. Add the canonical root `LICENSE` without changing third-party licensing.
+3. Rebuild without `-AllowMissingRootLicense` from the license-bearing commit and repeat the checksum, payload, install/uninstall, and smoke gates.
+4. Create the immutable `v0.1.0` tag, upload only the cleared artifact/checksum/SBOM to the existing draft, and publish it as a pre-release.
 
 Code signing and full accuracy certification remain separate Stable-release work and do not alter the redistribution decision above.

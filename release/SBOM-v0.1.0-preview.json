@@ -1,0 +1,6843 @@
+{
+  "$schema": "https://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:ad873d5e-b6d7-5f24-a017-fa1d6be313c9",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-08-22T19:35:09Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "LiveSub payload SBOM generator",
+          "version": "1"
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "bom-ref": "pkg:generic/livesub@0.1.0-preview",
+      "name": "LiveSub",
+      "version": "0.1.0-preview"
+    },
+    "properties": [
+      {
+        "name": "livesub:BuildCommit",
+        "value": "151bdd360239ed3dc8e0a4fe32e7146f8b5f8694"
+      },
+      {
+        "name": "livesub:InstallerSHA256",
+        "value": "0d6b2fcf591bf5b9d1337fb759c5f415745c3e95f63100b1d57930790066adb3"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/ab_glyph@0.2.32",
+      "name": "ab_glyph",
+      "version": "0.2.32",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/ab_glyph@0.2.32",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/alexheretic/ab-glyph"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/ab_glyph_rasterizer@0.1.10",
+      "name": "ab_glyph_rasterizer",
+      "version": "0.1.10",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/ab_glyph_rasterizer@0.1.10",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/alexheretic/ab-glyph"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/adler2@2.0.1",
+      "name": "adler2",
+      "version": "2.0.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "0BSD OR MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/adler2@2.0.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/oyvindln/adler2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/ahash@0.8.12",
+      "name": "ahash",
+      "version": "0.8.12",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/ahash@0.8.12",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/tkaitchuck/ahash"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/aho-corasick@1.1.5",
+      "name": "aho-corasick",
+      "version": "1.1.5",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unlicense OR MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/aho-corasick@1.1.5",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/BurntSushi/aho-corasick"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/anyhow@1.0.104",
+      "name": "anyhow",
+      "version": "1.0.104",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/anyhow@1.0.104",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/dtolnay/anyhow"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/arboard@3.6.1",
+      "name": "arboard",
+      "version": "3.6.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/arboard@3.6.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/1Password/arboard"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/base64@0.22.1",
+      "name": "base64",
+      "version": "0.22.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/base64@0.22.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/marshallpierce/rust-base64"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/bitflags@2.13.1",
+      "name": "bitflags",
+      "version": "2.13.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/bitflags@2.13.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/bitflags/bitflags"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/bytemuck@1.25.2",
+      "name": "bytemuck",
+      "version": "1.25.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "Zlib OR Apache-2.0 OR MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/bytemuck@1.25.2",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/Lokathor/bytemuck"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/bytemuck_derive@1.12.0",
+      "name": "bytemuck_derive",
+      "version": "1.12.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "Zlib OR Apache-2.0 OR MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/bytemuck_derive@1.12.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/Lokathor/bytemuck"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/byteorder-lite@0.1.0",
+      "name": "byteorder-lite",
+      "version": "0.1.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unlicense OR MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/byteorder-lite@0.1.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/image-rs/byteorder-lite"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/cfg-if@1.0.4",
+      "name": "cfg-if",
+      "version": "1.0.4",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/cfg-if@1.0.4",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/rust-lang/cfg-if"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/clipboard-win@5.4.1",
+      "name": "clipboard-win",
+      "version": "5.4.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSL-1.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/clipboard-win@5.4.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/DoumanAsh/clipboard-win"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/crc32fast@1.5.0",
+      "name": "crc32fast",
+      "version": "1.5.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/crc32fast@1.5.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/srijs/rust-crc32fast"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/crossbeam-channel@0.5.16",
+      "name": "crossbeam-channel",
+      "version": "0.5.16",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/crossbeam-channel@0.5.16",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/crossbeam-rs/crossbeam"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/crossbeam-utils@0.8.22",
+      "name": "crossbeam-utils",
+      "version": "0.8.22",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/crossbeam-utils@0.8.22",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/crossbeam-rs/crossbeam"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/cursor-icon@1.2.0",
+      "name": "cursor-icon",
+      "version": "1.2.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0 OR Zlib"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/cursor-icon@1.2.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/rust-windowing/cursor-icon"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/displaydoc@0.2.7",
+      "name": "displaydoc",
+      "version": "0.2.7",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/displaydoc@0.2.7",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/yaahc/displaydoc"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/document-features@0.2.12",
+      "name": "document-features",
+      "version": "0.2.12",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/document-features@0.2.12",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/slint-ui/document-features"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/dpi@0.1.2",
+      "name": "dpi",
+      "version": "0.1.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0 AND MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/dpi@0.1.2",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/rust-windowing/winit"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/ecolor@0.32.3",
+      "name": "ecolor",
+      "version": "0.32.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/ecolor@0.32.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/emilk/egui"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/eframe@0.32.3",
+      "name": "eframe",
+      "version": "0.32.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/eframe@0.32.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/emilk/egui/tree/main/crates/eframe"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/egui-winit@0.32.3",
+      "name": "egui-winit",
+      "version": "0.32.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/egui-winit@0.32.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/emilk/egui/tree/main/crates/egui-winit"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/egui@0.32.3",
+      "name": "egui",
+      "version": "0.32.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/egui@0.32.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/emilk/egui"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/egui_glow@0.32.3",
+      "name": "egui_glow",
+      "version": "0.32.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/egui_glow@0.32.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/emilk/egui/tree/main/crates/egui_glow"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/emath@0.32.3",
+      "name": "emath",
+      "version": "0.32.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/emath@0.32.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/emilk/egui/tree/main/crates/emath"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/epaint@0.32.3",
+      "name": "epaint",
+      "version": "0.32.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/epaint@0.32.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/emilk/egui/tree/main/crates/epaint"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/epaint_default_fonts@0.32.3",
+      "name": "epaint_default_fonts",
+      "version": "0.32.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "(MIT OR Apache-2.0) AND OFL-1.1 AND Ubuntu-font-1.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/epaint_default_fonts@0.32.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/emilk/egui/tree/main/crates/epaint_default_fonts"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/error-code@3.4.0",
+      "name": "error-code",
+      "version": "3.4.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSL-1.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/error-code@3.4.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/DoumanAsh/error-code"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/fax@0.2.7",
+      "name": "fax",
+      "version": "0.2.7",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/fax@0.2.7",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/pdf-rs/fax"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/fdeflate@0.3.7",
+      "name": "fdeflate",
+      "version": "0.3.7",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/fdeflate@0.3.7",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/image-rs/fdeflate"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/flate2@1.1.9",
+      "name": "flate2",
+      "version": "1.1.9",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/flate2@1.1.9",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/rust-lang/flate2-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/form_urlencoded@1.2.2",
+      "name": "form_urlencoded",
+      "version": "1.2.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/form_urlencoded@1.2.2",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/servo/rust-url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/glow@0.16.0",
+      "name": "glow",
+      "version": "0.16.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0 OR Zlib"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/glow@0.16.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/grovesNL/glow"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/glutin-winit@0.5.0",
+      "name": "glutin-winit",
+      "version": "0.5.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/glutin-winit@0.5.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/rust-windowing/glutin"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/glutin@0.32.3",
+      "name": "glutin",
+      "version": "0.32.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/glutin@0.32.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/rust-windowing/glutin"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/glutin_egl_sys@0.7.1",
+      "name": "glutin_egl_sys",
+      "version": "0.7.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/glutin_egl_sys@0.7.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/rust-windowing/glutin"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/glutin_wgl_sys@0.6.1",
+      "name": "glutin_wgl_sys",
+      "version": "0.6.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/glutin_wgl_sys@0.6.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/rust-windowing/glutin"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/half@2.7.1",
+      "name": "half",
+      "version": "2.7.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/half@2.7.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/VoidStarKat/half-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/icu_collections@2.3.0",
+      "name": "icu_collections",
+      "version": "2.3.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unicode-3.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/icu_collections@2.3.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/unicode-org/icu4x"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/icu_locale_core@2.3.0",
+      "name": "icu_locale_core",
+      "version": "2.3.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unicode-3.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/icu_locale_core@2.3.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/unicode-org/icu4x"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/icu_normalizer@2.3.0",
+      "name": "icu_normalizer",
+      "version": "2.3.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unicode-3.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/icu_normalizer@2.3.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/unicode-org/icu4x"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/icu_normalizer_data@2.3.0",
+      "name": "icu_normalizer_data",
+      "version": "2.3.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unicode-3.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/icu_normalizer_data@2.3.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/unicode-org/icu4x"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/icu_properties@2.3.0",
+      "name": "icu_properties",
+      "version": "2.3.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unicode-3.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/icu_properties@2.3.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/unicode-org/icu4x"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/icu_properties_data@2.3.0",
+      "name": "icu_properties_data",
+      "version": "2.3.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unicode-3.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/icu_properties_data@2.3.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/unicode-org/icu4x"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/icu_provider@2.3.1",
+      "name": "icu_provider",
+      "version": "2.3.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unicode-3.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/icu_provider@2.3.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/unicode-org/icu4x"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/idna@1.1.0",
+      "name": "idna",
+      "version": "1.1.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/idna@1.1.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/servo/rust-url/"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/idna_adapter@1.2.2",
+      "name": "idna_adapter",
+      "version": "1.2.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0 OR MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/idna_adapter@1.2.2",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/hsivonen/idna_adapter"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/image@0.25.10",
+      "name": "image",
+      "version": "0.25.10",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/image@0.25.10",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/image-rs/image"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/itoa@1.0.18",
+      "name": "itoa",
+      "version": "1.0.18",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/itoa@1.0.18",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/dtolnay/itoa"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/lazy_static@1.5.0",
+      "name": "lazy_static",
+      "version": "1.5.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/lazy_static@1.5.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/rust-lang-nursery/lazy-static.rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/libloading@0.8.9",
+      "name": "libloading",
+      "version": "0.8.9",
+      "licenses": [
+        {
+          "license": {
+            "name": "ISC"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/libloading@0.8.9",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/nagisa/rust_libloading/"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/litemap@0.8.3",
+      "name": "litemap",
+      "version": "0.8.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unicode-3.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/litemap@0.8.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/unicode-org/icu4x"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/litrs@1.0.0",
+      "name": "litrs",
+      "version": "1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/litrs@1.0.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/LukasKalbertodt/litrs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/lock_api@0.4.14",
+      "name": "lock_api",
+      "version": "0.4.14",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/lock_api@0.4.14",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/Amanieu/parking_lot"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/log@0.4.33",
+      "name": "log",
+      "version": "0.4.33",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/log@0.4.33",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/rust-lang/log"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/matchers@0.2.0",
+      "name": "matchers",
+      "version": "0.2.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/matchers@0.2.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/hawkw/matchers"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/memchr@2.8.3",
+      "name": "memchr",
+      "version": "2.8.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unlicense OR MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/memchr@2.8.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/BurntSushi/memchr"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/memoffset@0.9.1",
+      "name": "memoffset",
+      "version": "0.9.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/memoffset@0.9.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/Gilnaa/memoffset"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/miniz_oxide@0.8.9",
+      "name": "miniz_oxide",
+      "version": "0.8.9",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Zlib OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/miniz_oxide@0.8.9",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/Frommi/miniz_oxide/tree/master/miniz_oxide"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/moxcms@0.8.1",
+      "name": "moxcms",
+      "version": "0.8.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/moxcms@0.8.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/awxkee/moxcms.git"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/nohash-hasher@0.2.0",
+      "name": "nohash-hasher",
+      "version": "0.2.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0 OR MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/nohash-hasher@0.2.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/paritytech/nohash-hasher"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/nu-ansi-term@0.50.3",
+      "name": "nu-ansi-term",
+      "version": "0.50.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/nu-ansi-term@0.50.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/nushell/nu-ansi-term"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/num-traits@0.2.19",
+      "name": "num-traits",
+      "version": "0.2.19",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/num-traits@0.2.19",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/rust-num/num-traits"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/once_cell@1.21.4",
+      "name": "once_cell",
+      "version": "1.21.4",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/once_cell@1.21.4",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/matklad/once_cell"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/owned_ttf_parser@0.25.1",
+      "name": "owned_ttf_parser",
+      "version": "0.25.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/owned_ttf_parser@0.25.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/alexheretic/owned-ttf-parser"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/parking_lot@0.12.5",
+      "name": "parking_lot",
+      "version": "0.12.5",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/parking_lot@0.12.5",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/Amanieu/parking_lot"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/parking_lot_core@0.9.12",
+      "name": "parking_lot_core",
+      "version": "0.9.12",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/parking_lot_core@0.9.12",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/Amanieu/parking_lot"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/percent-encoding@2.3.2",
+      "name": "percent-encoding",
+      "version": "2.3.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/percent-encoding@2.3.2",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/servo/rust-url/"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/pin-project-lite@0.2.17",
+      "name": "pin-project-lite",
+      "version": "0.2.17",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0 OR MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/pin-project-lite@0.2.17",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/taiki-e/pin-project-lite"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/png@0.18.1",
+      "name": "png",
+      "version": "0.18.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/png@0.18.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/image-rs/image-png"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/potential_utf@0.1.6",
+      "name": "potential_utf",
+      "version": "0.1.6",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unicode-3.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/potential_utf@0.1.6",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/unicode-org/icu4x"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/proc-macro2@1.0.107",
+      "name": "proc-macro2",
+      "version": "1.0.107",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/proc-macro2@1.0.107",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/dtolnay/proc-macro2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/profiling@1.0.18",
+      "name": "profiling",
+      "version": "1.0.18",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/profiling@1.0.18",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/aclysma/profiling"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/pxfm@0.1.30",
+      "name": "pxfm",
+      "version": "0.1.30",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/pxfm@0.1.30",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/awxkee/pxfm"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/quick-error@2.0.1",
+      "name": "quick-error",
+      "version": "2.0.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT/Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/quick-error@2.0.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "http://github.com/tailhook/quick-error"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/quote@1.0.47",
+      "name": "quote",
+      "version": "1.0.47",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/quote@1.0.47",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/dtolnay/quote"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/raw-window-handle@0.6.2",
+      "name": "raw-window-handle",
+      "version": "0.6.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0 OR Zlib"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/raw-window-handle@0.6.2",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/rust-windowing/raw-window-handle"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/regex-automata@0.4.18",
+      "name": "regex-automata",
+      "version": "0.4.18",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/regex-automata@0.4.18",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/rust-lang/regex"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/regex-syntax@0.8.11",
+      "name": "regex-syntax",
+      "version": "0.8.11",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/regex-syntax@0.8.11",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/rust-lang/regex"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/scopeguard@1.2.0",
+      "name": "scopeguard",
+      "version": "1.2.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/scopeguard@1.2.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/bluss/scopeguard"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/serde@1.0.229",
+      "name": "serde",
+      "version": "1.0.229",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/serde@1.0.229",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/serde-rs/serde"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/serde_core@1.0.229",
+      "name": "serde_core",
+      "version": "1.0.229",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/serde_core@1.0.229",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/serde-rs/serde"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/serde_derive@1.0.229",
+      "name": "serde_derive",
+      "version": "1.0.229",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/serde_derive@1.0.229",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/serde-rs/serde"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/serde_json@1.0.151",
+      "name": "serde_json",
+      "version": "1.0.151",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/serde_json@1.0.151",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/serde-rs/json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/sharded-slab@0.1.7",
+      "name": "sharded-slab",
+      "version": "0.1.7",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/sharded-slab@0.1.7",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/hawkw/sharded-slab"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/simd-adler32@0.3.10",
+      "name": "simd-adler32",
+      "version": "0.3.10",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/simd-adler32@0.3.10",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/mcountryman/simd-adler32"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/smallvec@1.15.2",
+      "name": "smallvec",
+      "version": "1.15.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/smallvec@1.15.2",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/servo/rust-smallvec"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/smol_str@0.2.2",
+      "name": "smol_str",
+      "version": "0.2.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/smol_str@0.2.2",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/rust-analyzer/smol_str"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/stable_deref_trait@1.2.1",
+      "name": "stable_deref_trait",
+      "version": "1.2.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/stable_deref_trait@1.2.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/storyyeller/stable_deref_trait"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/static_assertions@1.1.0",
+      "name": "static_assertions",
+      "version": "1.1.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/static_assertions@1.1.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/nvzqz/static-assertions-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/syn@2.0.119",
+      "name": "syn",
+      "version": "2.0.119",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/syn@2.0.119",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/dtolnay/syn"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/syn@3.0.3",
+      "name": "syn",
+      "version": "3.0.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/syn@3.0.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/dtolnay/syn"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/synstructure@0.13.2",
+      "name": "synstructure",
+      "version": "0.13.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/synstructure@0.13.2",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/mystor/synstructure"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/thiserror-impl@2.0.20",
+      "name": "thiserror-impl",
+      "version": "2.0.20",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/thiserror-impl@2.0.20",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/dtolnay/thiserror"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/thiserror@2.0.20",
+      "name": "thiserror",
+      "version": "2.0.20",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/thiserror@2.0.20",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/dtolnay/thiserror"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/thread_local@1.1.10",
+      "name": "thread_local",
+      "version": "1.1.10",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/thread_local@1.1.10",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/Amanieu/thread_local-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/tiff@0.11.3",
+      "name": "tiff",
+      "version": "0.11.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/tiff@0.11.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/image-rs/image-tiff"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/tinystr@0.8.4",
+      "name": "tinystr",
+      "version": "0.8.4",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unicode-3.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/tinystr@0.8.4",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/unicode-org/icu4x"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/tracing-attributes@0.1.31",
+      "name": "tracing-attributes",
+      "version": "0.1.31",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/tracing-attributes@0.1.31",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/tokio-rs/tracing"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/tracing-core@0.1.36",
+      "name": "tracing-core",
+      "version": "0.1.36",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/tracing-core@0.1.36",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/tokio-rs/tracing"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/tracing-log@0.2.0",
+      "name": "tracing-log",
+      "version": "0.2.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/tracing-log@0.2.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/tokio-rs/tracing"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/tracing-subscriber@0.3.23",
+      "name": "tracing-subscriber",
+      "version": "0.3.23",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/tracing-subscriber@0.3.23",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/tokio-rs/tracing"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/tracing@0.1.44",
+      "name": "tracing",
+      "version": "0.1.44",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/tracing@0.1.44",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/tokio-rs/tracing"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/ttf-parser@0.25.1",
+      "name": "ttf-parser",
+      "version": "0.25.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/ttf-parser@0.25.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/harfbuzz/ttf-parser"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/unicode-ident@1.0.24",
+      "name": "unicode-ident",
+      "version": "1.0.24",
+      "licenses": [
+        {
+          "license": {
+            "name": "(MIT OR Apache-2.0) AND Unicode-3.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/unicode-ident@1.0.24",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/dtolnay/unicode-ident"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/unicode-segmentation@1.13.3",
+      "name": "unicode-segmentation",
+      "version": "1.13.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/unicode-segmentation@1.13.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/unicode-rs/unicode-segmentation"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/url@2.5.8",
+      "name": "url",
+      "version": "2.5.8",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/url@2.5.8",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/servo/rust-url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/utf8_iter@1.0.4",
+      "name": "utf8_iter",
+      "version": "1.0.4",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0 OR MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/utf8_iter@1.0.4",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/hsivonen/utf8_iter"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/web-time@1.1.0",
+      "name": "web-time",
+      "version": "1.1.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/web-time@1.1.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/daxpedda/web-time"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/webbrowser@1.2.4",
+      "name": "webbrowser",
+      "version": "1.2.4",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/webbrowser@1.2.4",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/amodm/webbrowser-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/weezl@0.1.12",
+      "name": "weezl",
+      "version": "0.1.12",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/weezl@0.1.12",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/image-rs/weezl"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/winapi@0.3.9",
+      "name": "winapi",
+      "version": "0.3.9",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT/Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/winapi@0.3.9",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/retep998/winapi-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/windows-collections@0.2.0",
+      "name": "windows-collections",
+      "version": "0.2.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/windows-collections@0.2.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/windows-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/windows-core@0.61.2",
+      "name": "windows-core",
+      "version": "0.61.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/windows-core@0.61.2",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/windows-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/windows-future@0.2.1",
+      "name": "windows-future",
+      "version": "0.2.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/windows-future@0.2.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/windows-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/windows-implement@0.60.2",
+      "name": "windows-implement",
+      "version": "0.60.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/windows-implement@0.60.2",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/windows-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/windows-interface@0.59.3",
+      "name": "windows-interface",
+      "version": "0.59.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/windows-interface@0.59.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/windows-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/windows-link@0.1.3",
+      "name": "windows-link",
+      "version": "0.1.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/windows-link@0.1.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/windows-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/windows-link@0.2.1",
+      "name": "windows-link",
+      "version": "0.2.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/windows-link@0.2.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/windows-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/windows-numerics@0.2.0",
+      "name": "windows-numerics",
+      "version": "0.2.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/windows-numerics@0.2.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/windows-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/windows-result@0.3.4",
+      "name": "windows-result",
+      "version": "0.3.4",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/windows-result@0.3.4",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/windows-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/windows-strings@0.4.2",
+      "name": "windows-strings",
+      "version": "0.4.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/windows-strings@0.4.2",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/windows-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/windows-sys@0.52.0",
+      "name": "windows-sys",
+      "version": "0.52.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/windows-sys@0.52.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/windows-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/windows-sys@0.59.0",
+      "name": "windows-sys",
+      "version": "0.59.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/windows-sys@0.59.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/windows-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/windows-sys@0.60.2",
+      "name": "windows-sys",
+      "version": "0.60.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/windows-sys@0.60.2",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/windows-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/windows-sys@0.61.2",
+      "name": "windows-sys",
+      "version": "0.61.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/windows-sys@0.61.2",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/windows-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/windows-targets@0.52.6",
+      "name": "windows-targets",
+      "version": "0.52.6",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/windows-targets@0.52.6",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/windows-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/windows-targets@0.53.5",
+      "name": "windows-targets",
+      "version": "0.53.5",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/windows-targets@0.53.5",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/windows-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/windows-threading@0.1.0",
+      "name": "windows-threading",
+      "version": "0.1.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/windows-threading@0.1.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/windows-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/windows@0.61.3",
+      "name": "windows",
+      "version": "0.61.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/windows@0.61.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/windows-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/windows_x86_64_msvc@0.52.6",
+      "name": "windows_x86_64_msvc",
+      "version": "0.52.6",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/windows_x86_64_msvc@0.52.6",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/windows-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/windows_x86_64_msvc@0.53.1",
+      "name": "windows_x86_64_msvc",
+      "version": "0.53.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/windows_x86_64_msvc@0.53.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/windows-rs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/winit@0.30.13",
+      "name": "winit",
+      "version": "0.30.13",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/winit@0.30.13",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/rust-windowing/winit"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/writeable@0.6.4",
+      "name": "writeable",
+      "version": "0.6.4",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unicode-3.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/writeable@0.6.4",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/unicode-org/icu4x"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/yoke-derive@0.8.2",
+      "name": "yoke-derive",
+      "version": "0.8.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unicode-3.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/yoke-derive@0.8.2",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/unicode-org/icu4x"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/yoke@0.8.3",
+      "name": "yoke",
+      "version": "0.8.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unicode-3.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/yoke@0.8.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/unicode-org/icu4x"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/zerocopy-derive@0.8.56",
+      "name": "zerocopy-derive",
+      "version": "0.8.56",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-Clause OR Apache-2.0 OR MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/zerocopy-derive@0.8.56",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/google/zerocopy"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/zerocopy@0.8.56",
+      "name": "zerocopy",
+      "version": "0.8.56",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-Clause OR Apache-2.0 OR MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/zerocopy@0.8.56",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/google/zerocopy"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/zerofrom-derive@0.1.7",
+      "name": "zerofrom-derive",
+      "version": "0.1.7",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unicode-3.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/zerofrom-derive@0.1.7",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/unicode-org/icu4x"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/zerofrom@0.1.8",
+      "name": "zerofrom",
+      "version": "0.1.8",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unicode-3.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/zerofrom@0.1.8",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/unicode-org/icu4x"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/zerotrie@0.2.5",
+      "name": "zerotrie",
+      "version": "0.2.5",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unicode-3.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/zerotrie@0.2.5",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/unicode-org/icu4x"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/zerovec-derive@0.11.6",
+      "name": "zerovec-derive",
+      "version": "0.11.6",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unicode-3.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/zerovec-derive@0.11.6",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/unicode-org/icu4x"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/zerovec@0.11.8",
+      "name": "zerovec",
+      "version": "0.11.8",
+      "licenses": [
+        {
+          "license": {
+            "name": "Unicode-3.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/zerovec@0.11.8",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/unicode-org/icu4x"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/zmij@1.0.23",
+      "name": "zmij",
+      "version": "1.0.23",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/zmij@1.0.23",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/dtolnay/zmij"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/zune-core@0.5.3",
+      "name": "zune-core",
+      "version": "0.5.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0 OR Zlib"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/zune-core@0.5.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/etemesi254/zune-image"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:cargo/zune-jpeg@0.5.15",
+      "name": "zune-jpeg",
+      "version": "0.5.15",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT OR Apache-2.0 OR Zlib"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Cargo.lock and Windows-filtered normal dependency graph"
+        }
+      ],
+      "purl": "pkg:cargo/zune-jpeg@0.5.15",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/etemesi254/zune-image/tree/dev/crates/zune-jpeg"
+        }
+      ]
+    },
+    {
+      "type": "framework",
+      "bom-ref": "pkg:generic/cpython@3.12.10?distribution=embeddable-windows-x64",
+      "name": "CPython embeddable runtime",
+      "version": "3.12.10",
+      "licenses": [
+        {
+          "license": {
+            "name": "Python-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "python312.dll and python/LICENSE.txt in release payload"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://www.python.org/downloads/release/python-31210/"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9a0e3435aaa680d868150f87ab3e388ad2eebc22f87e036155c7b4eda8cd2120"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/ctranslate2-third-party/bs-thread-pool@5.1.0",
+      "name": "BS thread pool",
+      "version": "5.1.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Pinned CTranslate2 v4.8.1 source/submodule; statically incorporated where selected by Windows wheel build"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/bshoshany/thread-pool"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/ctranslate2-third-party/cpu_features@8a494eb1e158ec2050e5f699a504fbc9b896a43b",
+      "name": "cpu_features",
+      "version": "8a494eb1e158ec2050e5f699a504fbc9b896a43b",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Pinned CTranslate2 v4.8.1 source/submodule; statically incorporated where selected by Windows wheel build"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/google/cpu_features"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/ctranslate2-third-party/cutlass@bbe579a9e3beb6ea6626d9227ec32d0dae119a49",
+      "name": "CUTLASS",
+      "version": "bbe579a9e3beb6ea6626d9227ec32d0dae119a49",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Pinned CTranslate2 v4.8.1 source/submodule; statically incorporated where selected by Windows wheel build"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/NVIDIA/cutlass"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/ctranslate2-third-party/cxxopts@c74846a891b3cc3bfa992d588b1295f528d43039",
+      "name": "cxxopts",
+      "version": "c74846a891b3cc3bfa992d588b1295f528d43039",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Pinned CTranslate2 v4.8.1 source/submodule; statically incorporated where selected by Windows wheel build"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/jarro2783/cxxopts"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/ctranslate2-third-party/julien-pommier-simd-math-functions@CTranslate2-v4.8.1",
+      "name": "Julien Pommier SIMD math functions",
+      "version": "CTranslate2-v4.8.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "Zlib"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Pinned CTranslate2 v4.8.1 source/submodule; statically incorporated where selected by Windows wheel build"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/OpenNMT/CTranslate2/tree/v4.8.1/third_party"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/ctranslate2-third-party/onednn@3.1.1",
+      "name": "oneDNN",
+      "version": "3.1.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Pinned CTranslate2 v4.8.1 source/submodule; statically incorporated where selected by Windows wheel build"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/oneapi-src/oneDNN"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/ctranslate2-third-party/ruy@363f252289fb7a1fba1703d99196524698cb884d",
+      "name": "ruy",
+      "version": "363f252289fb7a1fba1703d99196524698cb884d",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Pinned CTranslate2 v4.8.1 source/submodule; statically incorporated where selected by Windows wheel build"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/google/ruy"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/ctranslate2-third-party/spdlog@76fb40d95455f249bd70824ecfcae7a8f0930fa3",
+      "name": "spdlog",
+      "version": "76fb40d95455f249bd70824ecfcae7a8f0930fa3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Pinned CTranslate2 v4.8.1 source/submodule; statically incorporated where selected by Windows wheel build"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/gabime/spdlog"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/ctranslate2-third-party/thrust@b5fe509fd11a925f90d6495176707cc1184eed9d",
+      "name": "Thrust",
+      "version": "b5fe509fd11a925f90d6495176707cc1184eed9d",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Pinned CTranslate2 v4.8.1 source/submodule; statically incorporated where selected by Windows wheel build"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/NVIDIA/thrust"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/gcc-runtime-library-in-openblas@NumPy-2.5.2-wheel",
+      "name": "GCC Runtime Library in OpenBLAS",
+      "version": "NumPy-2.5.2-wheel",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPL-3.0-or-later WITH GCC-exception-3.1"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "NumPy 2.5.2 wheel LICENSE.txt identifies eligible GCC runtime code statically linked into the OpenBLAS DLL and supplies the Runtime Library Exception"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://gcc.gnu.org/onlinedocs/libstdc++/manual/license.html"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "327b2e0bcffce2882e0dc04cdeb4eaa6382ed4dba29871b6176fa157782f484a"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/intel-onemkl@2025.3.0.372",
+      "name": "Intel oneMKL",
+      "version": "2025.3.0.372",
+      "licenses": [
+        {
+          "license": {
+            "name": "Intel Simplified Software License"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Statically incorporated; pinned by CTranslate2 v4.8.1 Windows wheel build script"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://www.intel.com/content/www/us/en/developer/articles/tool/onemkl-license-faq.html"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a26134c47079896fc046317a3aea22a64df6b63b8c51272748cd2cc406d8d668"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/intel-openmp-runtime@20250910",
+      "name": "Intel OpenMP Runtime",
+      "version": "20250910",
+      "licenses": [
+        {
+          "license": {
+            "name": "Intel Simplified Software License"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "CTranslate2 4.8.1 Windows wheel; Authenticode signer Intel Corporation"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://www.intel.com/content/www/us/en/content-details/749362/intel-simplified-software-license-version-october-2022.html"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "982233366b0afcda1e0f55a0b134097e35b779613f54ddb69e685e6cd06b755f"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/lapack-in-openblas@OpenBLAS-0.3.34.0.0",
+      "name": "LAPACK in OpenBLAS",
+      "version": "OpenBLAS-0.3.34.0.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause-Open-MPI"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "NumPy 2.5.2 wheel LICENSE.txt identifies LAPACK bundled in the OpenBLAS DLL"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/OpenMathLib/OpenBLAS"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "327b2e0bcffce2882e0dc04cdeb4eaa6382ed4dba29871b6176fa157782f484a"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "pkg:generic/livesub-setup@0.1.0-preview",
+      "name": "LiveSub Setup",
+      "version": "0.1.0-preview",
+      "licenses": [
+        {
+          "license": {
+            "name": "Inno Setup License"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "dist/LiveSub-Setup.exe built with Inno Setup 6.7.3"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0d6b2fcf591bf5b9d1337fb759c5f415745c3e95f63100b1d57930790066adb3"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "bom-ref": "pkg:generic/livesub@0.1.0-preview",
+      "name": "LiveSub",
+      "version": "0.1.0-preview",
+      "licenses": [
+        {
+          "license": {
+            "name": "OWNER REVIEW REQUIRED: Cargo.toml says MIT; root LICENSE missing"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "release payload/livesub.exe; repository root LICENSE is absent"
+        }
+      ],
+      "purl": "pkg:generic/livesub@0.1.0-preview",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/dashqqq/LiveSub"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ddf42edc59c823ab58eaa73b34247492d18087b3b69e52974e81fd5aee281da1"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/microsoft-visual-c++-runtime-(numpy-wheel)@14.40.33810.0",
+      "name": "Microsoft Visual C++ Runtime (NumPy wheel)",
+      "version": "14.40.33810.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "Microsoft Visual C++ Runtime terms"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Unmodified msvcp140 DLL supplied in the NumPy 2.5.2 Windows wheel"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://learn.microsoft.com/cpp/windows/redistributing-visual-cpp-files"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a4c2229bdc2a2a630acdc095b4d86008e5c3e3bc7773174354f3da4f5beb9cde"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/microsoft-visual-c++-runtime@14.42.34438.0",
+      "name": "Microsoft Visual C++ Runtime",
+      "version": "14.42.34438.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "Microsoft Visual C++ Runtime terms"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Microsoft Distributable Code in CPython 3.12.10 Windows build"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://learn.microsoft.com/cpp/windows/redistributing-visual-cpp-files"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "052ad6a20d375957e82aa6a3c441ea548d89be0981516ca7eb306e063d5027f4"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/nvidia-cudnn-compatibility-runtime@9.10.2.21",
+      "name": "NVIDIA cuDNN compatibility runtime",
+      "version": "9.10.2.21",
+      "licenses": [
+        {
+          "license": {
+            "name": "NVIDIA SDK License Agreement and cuDNN Supplement"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "CTranslate2 4.8.1 wheel compatibility DLL; Authenticode signer NVIDIA Corporation"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://docs.nvidia.com/deeplearning/cudnn/backend/reference/eula.html"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9edbcdff73b0af070eb160b2ce66e59feca04aa017351d8eedcc5e8e149967d2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/openblas@0.3.34.0.0",
+      "name": "OpenBLAS",
+      "version": "0.3.34.0.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "NumPy 2.5.2 show_config and wheel LICENSE.txt; dynamically bundled in numpy.libs"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/OpenMathLib/OpenBLAS"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "327b2e0bcffce2882e0dc04cdeb4eaa6382ed4dba29871b6176fa157782f484a"
+        }
+      ]
+    },
+    {
+      "type": "machine-learning-model",
+      "bom-ref": "pkg:generic/silero-vad@v6?distribution=faster-whisper-1.2.1",
+      "name": "Silero VAD v6 graph supplied by faster-whisper",
+      "version": "v6/faster-whisper-1.2.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "faster_whisper/assets/silero_vad_v6.onnx in release payload"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/SYSTRAN/faster-whisper/tree/v1.2.1"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4cbf549b8326f60f80f2536d9eefeb450a9abe83365a098031c89719f1be17d2"
+        }
+      ]
+    },
+    {
+      "type": "machine-learning-model",
+      "bom-ref": "pkg:huggingface/Systran/faster-whisper-small@536b0662742c02347bc0e980a01041f333bce120",
+      "name": "SYSTRAN faster-whisper-small",
+      "version": "536b0662742c02347bc0e980a01041f333bce120",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "Pinned Hugging Face revision; conversion of openai/whisper-small"
+        }
+      ],
+      "purl": "pkg:huggingface/Systran/faster-whisper-small@536b0662742c02347bc0e980a01041f333bce120",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://huggingface.co/Systran/faster-whisper-small"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/anyio@4.14.2",
+      "name": "anyio",
+      "version": "4.14.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "anyio-4.14.2.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/anyio@4.14.2"
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/certifi@2026.7.22",
+      "name": "certifi",
+      "version": "2026.7.22",
+      "licenses": [
+        {
+          "license": {
+            "name": "MPL-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "certifi-2026.7.22.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/certifi@2026.7.22",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/certifi/python-certifi"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/cffi@2.1.1",
+      "name": "cffi",
+      "version": "2.1.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT-0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "cffi-2.1.1.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/cffi@2.1.1"
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/click@8.4.2",
+      "name": "click",
+      "version": "8.4.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "click-8.4.2.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/click@8.4.2",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/pallets/click/"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/colorama@0.4.6",
+      "name": "colorama",
+      "version": "0.4.6",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD License"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "colorama-0.4.6.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/colorama@0.4.6",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/tartley/colorama"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/cryptography@50.0.0",
+      "name": "cryptography",
+      "version": "50.0.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0 OR BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "cryptography-50.0.0.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/cryptography@50.0.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/ctranslate2@4.8.1",
+      "name": "ctranslate2",
+      "version": "4.8.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "ctranslate2-4.8.1.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/ctranslate2@4.8.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/OpenNMT/CTranslate2"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/faster-whisper@1.2.1",
+      "name": "faster-whisper",
+      "version": "1.2.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "faster_whisper-1.2.1.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/faster-whisper@1.2.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/SYSTRAN/faster-whisper"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/filelock@3.32.3",
+      "name": "filelock",
+      "version": "3.32.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "filelock-3.32.3.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/filelock@3.32.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/tox-dev/py-filelock"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/flatbuffers@25.12.19",
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache 2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "flatbuffers-25.12.19.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/flatbuffers@25.12.19",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/google/flatbuffers"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/fsspec@2026.7.0",
+      "name": "fsspec",
+      "version": "2026.7.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "fsspec-2026.7.0.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/fsspec@2026.7.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/fsspec/filesystem_spec"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/h11@0.16.0",
+      "name": "h11",
+      "version": "0.16.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "h11-0.16.0.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/h11@0.16.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/python-hyper/h11"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/hf-xet@1.6.0",
+      "name": "hf-xet",
+      "version": "1.6.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "hf_xet-1.6.0.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/hf-xet@1.6.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/huggingface/xet-core"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/httpcore@1.0.9",
+      "name": "httpcore",
+      "version": "1.0.9",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "httpcore-1.0.9.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/httpcore@1.0.9",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://www.encode.io/httpcore/"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/httpx@0.28.1",
+      "name": "httpx",
+      "version": "0.28.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "httpx-0.28.1.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/httpx@0.28.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/encode/httpx"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/huggingface-hub@1.28.0",
+      "name": "huggingface_hub",
+      "version": "1.28.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "huggingface_hub-1.28.0.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/huggingface-hub@1.28.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/huggingface/huggingface_hub"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/idna@3.19",
+      "name": "idna",
+      "version": "3.19",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "idna-3.19.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/idna@3.19",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/kjd/idna"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/numpy@2.5.2",
+      "name": "numpy",
+      "version": "2.5.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "numpy-2.5.2.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/numpy@2.5.2",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://numpy.org"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/nvidia-cublas-cu12@12.9.2.10",
+      "name": "nvidia-cublas-cu12",
+      "version": "12.9.2.10",
+      "licenses": [
+        {
+          "license": {
+            "name": "LicenseRef-NVIDIA-Proprietary"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "nvidia_cublas_cu12-12.9.2.10.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/nvidia-cublas-cu12@12.9.2.10",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://developer.nvidia.com/cuda-zone"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/nvidia-cuda-nvrtc-cu12@12.9.86",
+      "name": "nvidia-cuda-nvrtc-cu12",
+      "version": "12.9.86",
+      "licenses": [
+        {
+          "license": {
+            "name": "LicenseRef-NVIDIA-Proprietary"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "nvidia_cuda_nvrtc_cu12-12.9.86.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/nvidia-cuda-nvrtc-cu12@12.9.86",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://developer.nvidia.com/cuda-zone"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/nvidia-cudnn-cu12@9.24.0.43",
+      "name": "nvidia-cudnn-cu12",
+      "version": "9.24.0.43",
+      "licenses": [
+        {
+          "license": {
+            "name": "LicenseRef-NVIDIA-Proprietary"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "nvidia_cudnn_cu12-9.24.0.43.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/nvidia-cudnn-cu12@9.24.0.43",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://developer.nvidia.com/cuda-zone"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/onnxruntime@1.29.0",
+      "name": "onnxruntime",
+      "version": "1.29.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT License"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "onnxruntime-1.29.0.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/onnxruntime@1.29.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://onnxruntime.ai"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/packaging@26.3",
+      "name": "packaging",
+      "version": "26.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0 OR BSD-2-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "packaging-26.3.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/packaging@26.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/pypa/packaging"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/protobuf@7.36.0",
+      "name": "protobuf",
+      "version": "7.36.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "3-Clause BSD License"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "protobuf-7.36.0.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/protobuf@7.36.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://developers.google.com/protocol-buffers/"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pycparser@3.0",
+      "name": "pycparser",
+      "version": "3.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "pycparser-3.0.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/pycparser@3.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/eliben/pycparser"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pyyaml@6.0.3",
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "pyyaml-6.0.3.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/pyyaml@6.0.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://pyyaml.org/"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/tokenizers@0.23.1",
+      "name": "tokenizers",
+      "version": "0.23.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache Software License"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "tokenizers-0.23.1.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/tokenizers@0.23.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/huggingface/tokenizers"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/tqdm@4.70.0",
+      "name": "tqdm",
+      "version": "4.70.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MPL-2.0 AND MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "tqdm-4.70.0.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/tqdm@4.70.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://tqdm.github.io"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/typing-extensions@4.16.0",
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "PSF-2.0"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "livesub:Bundled",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:RuntimeDependency",
+          "value": "YES"
+        },
+        {
+          "name": "livesub:Evidence",
+          "value": "typing_extensions-4.16.0.dist-info/METADATA in release payload"
+        }
+      ],
+      "purl": "pkg:pypi/typing-extensions@4.16.0",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://github.com/python/typing_extensions"
+        }
+      ]
+    }
+  ]
+}
