@@ -133,8 +133,19 @@ if (Test-Path $consoleLaunchers -PathType Container) {
 # runs. It is never required by the private runtime and must not ship.
 Get-ChildItem -LiteralPath $payload -Recurse -Directory -Filter "__pycache__" |
     Remove-Item -Recurse -Force
-Get-ChildItem -LiteralPath $payload -Recurse -File -Include "*.pyc", "*.pyo" |
-    Remove-Item -Force
+Get-ChildItem -LiteralPath $payload -Recurse -File |
+    Where-Object { $_.Extension -in @(".pyc", ".pyo") } |
+    ForEach-Object { Remove-Item -LiteralPath $_.FullName -Force }
+foreach ($requiredStagedFile in @(
+    (Join-Path $payload "livesub.exe"),
+    (Join-Path $payloadPython "python.exe"),
+    (Join-Path $payloadPython "python312.dll"),
+    (Join-Path $payloadPython "LICENSE.txt")
+)) {
+    if (-not (Test-Path $requiredStagedFile -PathType Leaf)) {
+        throw "Required staged runtime file disappeared during cleanup: $requiredStagedFile"
+    }
+}
 
 # Catch missing source modules and signing dependencies before producing an
 # installer. This runs from the exact private runtime tree that will ship.
