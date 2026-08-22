@@ -245,6 +245,7 @@ impl AiWorker {
             config.script.display()
         );
         let mut child = Command::new(&config.python)
+            .arg("-B")
             .arg("-u")
             .arg(&config.script)
             .stdin(Stdio::piped())
