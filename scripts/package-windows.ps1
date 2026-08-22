@@ -17,6 +17,20 @@ $sourceModelRoot = [System.IO.Path]::GetFullPath((Join-Path $workspace $ModelDir
 $smallModel = Join-Path $sourceModelRoot "models--Systran--faster-whisper-small"
 $rootLicense = Join-Path $workspace "LICENSE"
 
+$requiredPythonFiles = @(
+    "python.exe",
+    "pythonw.exe",
+    "python312.dll",
+    "python312.zip",
+    "python312._pth",
+    "LICENSE.txt"
+)
+foreach ($requiredPythonFile in $requiredPythonFiles) {
+    if (-not (Test-Path (Join-Path $sourcePythonRoot $requiredPythonFile) -PathType Leaf)) {
+        throw "Python runtime source is not the required CPython 3.12.10 embeddable layout: missing $requiredPythonFile"
+    }
+}
+
 if (-not (Test-Path $rootLicense -PathType Leaf) -and -not $AllowMissingRootLicense) {
     throw "Root LICENSE is missing. The owner must approve the LiveSub source license before a redistributable build."
 }
@@ -75,7 +89,9 @@ Copy-Item (Join-Path $workspace "registry") $payload -Recurse
 
 # The source is Python's embeddable distribution. Copy only its runtime files;
 # pip then reconstructs an isolated, dependency-minimal site-packages tree.
-Get-ChildItem $sourcePythonRoot -File | Copy-Item -Destination $payloadPython
+Get-ChildItem -LiteralPath $sourcePythonRoot -File | ForEach-Object {
+    Copy-Item -LiteralPath $_.FullName -Destination $payloadPython
+}
 $pathConfiguration = Get-ChildItem $payloadPython -Filter "python*._pth" -File
 if ($pathConfiguration.Count -ne 1) {
     throw "Expected exactly one embeddable Python path configuration"
