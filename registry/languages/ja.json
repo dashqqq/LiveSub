@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "language": "ja",
+  "display_name": "Japanese",
+  "target_language": "en",
+  "status": "benchmark_required",
+  "installable": false,
+  "registry_version": "2026.08.22-dev1",
+  "vad": {
+    "candidate": "silero-vad-6.2.1",
+    "settings_status": "ab_test_required",
+    "speech_threshold": 0.5,
+    "minimum_speech_ms": 64,
+    "minimum_silence_ms": 450,
+    "speech_padding_ms": 400
+  },
+  "lid": {
+    "strategy": "accumulated_evidence_lock",
+    "lock_threshold": 0.82,
+    "minimum_useful_speech_ms": 1500,
+    "unlock": ["long_silence", "repeated_high_confidence_contradiction", "explicit_user_request", "new_media_session"],
+    "settings_status": "benchmark_required"
+  },
+  "routes_to_benchmark": [
+    {
+      "name": "whisper-direct",
+      "asr": "whisper-large-v3",
+      "translation": "whisper-large-v3-direct",
+      "preserves_source": false
+    },
+    {
+      "name": "source-opus",
+      "asr_candidates": ["qwen3-asr-1.7b", "qwen3-asr-0.6b", "whisper-large-v3", "current-faster-whisper-small"],
+      "translation": "opus-mt-ja-en",
+      "preserves_source": true
+    },
+    {
+      "name": "source-m2m100",
+      "asr_candidates": ["qwen3-asr-1.7b", "qwen3-asr-0.6b", "whisper-large-v3"],
+      "translation": "m2m100-418m",
+      "preserves_source": true
+    }
+  ],
+  "profiles": {
+    "maximum_accuracy": { "selection": null },
+    "balanced": { "selection": null },
+    "low_resource": { "selection": null }
+  },
+  "selection": {
+    "decision": "pending",
+    "reason": "The existing smoke clip has no reviewed source or semantic-English gold; measured latency alone cannot select a route."
+  }
+}

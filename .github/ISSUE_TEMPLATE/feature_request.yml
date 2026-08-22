@@ -1,0 +1,40 @@
+name: Feature request
+description: Suggest a focused improvement for LiveSub
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Explain the user problem first. New language requests must account for accuracy evidence, model provenance, licensing, integrity, and live hardware performance.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: Who encounters this problem and what can they not do today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed experience
+      description: Describe the simplest user-facing behavior that would solve it.
+    validations:
+      required: true
+  - type: textarea
+    id: accuracy
+    attributes:
+      label: Accuracy and privacy impact
+      description: Could this affect subtitle meaning, latency, local processing, network use, or stored data?
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues and the roadmap.
+          required: true
+        - label: This report contains no private audio, transcript, or credentials.
+          required: true

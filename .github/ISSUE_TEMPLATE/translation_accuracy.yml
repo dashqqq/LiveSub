@@ -1,0 +1,75 @@
+name: Translation accuracy
+description: Report a recognition or translation meaning error
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Accuracy reports are valuable. Text descriptions are normally enough. Audio is optional: never upload private, copyrighted, or personally identifying media publicly unless you own it and have consent to share it.
+  - type: dropdown
+    id: language
+    attributes:
+      label: Source language
+      options:
+        - Russian
+        - Japanese
+        - Hindi
+        - English
+        - Mixed or code-switched
+    validations:
+      required: true
+  - type: textarea
+    id: source_text
+    attributes:
+      label: Source wording
+      description: Write what was said, if known. Transliteration is welcome.
+    validations:
+      required: false
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected meaning in English
+      description: Preserve negation, numbers, names, directions, uncertainty, and context.
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed LiveSub subtitle
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and terminology
+      description: Include game, product, or character names and surrounding meaning needed to judge the translation.
+  - type: checkboxes
+    id: conditions
+    attributes:
+      label: Audio conditions
+      options:
+        - label: Fast speech
+        - label: Background music or game sound
+        - label: Multiple or overlapping speakers
+        - label: Code switching or mixed languages
+        - label: Regional accent
+        - label: Quiet or distant speech
+  - type: textarea
+    id: environment
+    attributes:
+      label: Version and hardware
+      description: LiveSub version, Windows version, CPU, GPU, RAM, and audio source or application.
+    validations:
+      required: true
+  - type: textarea
+    id: audio
+    attributes:
+      label: Optional reproducible sample
+      description: Prefer a timestamped public link or short self-created sample you have rights and consent to share. Do not attach private or copyrighted audio by default.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Sharing confirmation
+      options:
+        - label: Any material I linked or attached is safe and authorized for public sharing.
+          required: true

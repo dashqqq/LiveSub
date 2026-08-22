@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "keys": {},
+  "notes": [
+    "No production signing key has been provisioned.",
+    "Production registry and language-pack loading therefore fails closed.",
+    "Development-only unsigned loading must be enabled explicitly in test tooling."
+  ]
+}

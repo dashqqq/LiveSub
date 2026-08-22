@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "registry_version": "2026.08.22-dev1",
+  "generated_at": "2026-08-22T13:30:00Z",
+  "production_ready": false,
+  "notes": [
+    "This is a curated, pinned evaluation registry, not a production model selection.",
+    "All language recipes remain non-installable until their human-reviewed corpus, live latency, and local acceptance gates pass.",
+    "The development copy is deliberately unsigned; production loading fails closed until an Ed25519 key is provisioned."
+  ],
+  "models": [
+    {
+      "id": "silero-vad-6.2.1",
+      "owner": "Silero Team",
+      "repository": "snakers4/silero-vad",
+      "revision": "7e30209a3e901f9842f81b225f3e93d8199902b1",
+      "role": "vad",
+      "runtime": "onnxruntime",
+      "status": "approved_candidate",
+      "trust_remote_code": false,
+      "languages": ["language-agnostic"],
+      "limitations": [
+        "A small downstream ASR A/B did not establish an accuracy improvement; production promotion is held pending labelled noise, music, quiet-speech, and boundary tests."
+      ],
+      "artifacts": [
+        {
+          "path": "src/silero_vad/data/silero_vad.onnx",
+          "size_bytes": 2327524,
+          "sha256": "1a153a22f4509e292a94e67d6f9b85e8deb25b4988682b7e174c65279d8788e3"
+        }
+      ],
+      "license": {
+        "spdx": "MIT",
+        "commercial_use_allowed": true,
+        "redistribution_allowed": true,
+        "attribution_required": true,
+        "evidence_url": "https://github.com/snakers4/silero-vad/blob/v6.2.1/LICENSE"
+      }
+    },
+    {
+      "id": "current-faster-whisper-small",
+      "owner": "SYSTRAN",
+      "repository": "Systran/faster-whisper-small",
+      "revision": "536b0662742c02347bc0e980a01041f333bce120",
+      "role": "asr",
+      "runtime": "ctranslate2",
+      "status": "approved_reference",
+      "trust_remote_code": false,
+      "languages": ["en", "ru", "ja", "hi"],
+      "license": {
+        "spdx": "MIT",
+        "commercial_use_allowed": true,
+        "redistribution_allowed": true,
+        "attribution_required": true,
+        "evidence_url": "https://huggingface.co/Systran/faster-whisper-small/blob/main/LICENSE"
+      }
+    },
+    {
+      "id": "whisper-large-v3",
+      "owner": "SYSTRAN",
+      "repository": "Systran/faster-whisper-large-v3",
+      "revision": "edaa852ec7e145841d8ffdb056a99866b5f0a478",
+      "role": "asr",
+      "runtime": "ctranslate2",
+      "status": "approved_candidate",
+      "trust_remote_code": false,
+      "languages": ["en", "ru", "ja", "hi"],
+      "license": {
+        "spdx": "MIT",
+        "commercial_use_allowed": true,
+        "redistribution_allowed": true,
+        "attribution_required": true,
+        "evidence_url": "https://huggingface.co/Systran/faster-whisper-large-v3/blob/main/LICENSE"
+      }
+    },
+    {
+      "id": "qwen3-asr-0.6b",
+      "owner": "Qwen",
+      "repository": "Qwen/Qwen3-ASR-0.6B",
+      "revision": "5eb144179a02acc5e5ba31e748d22b0cf3e303b0",
+      "role": "asr",
+      "runtime": "qwen-asr-transformers",
+      "status": "approved_candidate",
+      "trust_remote_code": false,
+      "languages": ["en", "ru", "ja", "hi"],
+      "limitations": ["Official Transformers backend is final-pass only; official streaming requires the vLLM backend."],
+      "license": {
+        "spdx": "Apache-2.0",
+        "commercial_use_allowed": true,
+        "redistribution_allowed": true,
+        "attribution_required": true,
+        "evidence_url": "https://huggingface.co/Qwen/Qwen3-ASR-0.6B/blob/main/LICENSE"
+      }
+    },
+    {
+      "id": "qwen3-asr-1.7b",
+      "owner": "Qwen",
+      "repository": "Qwen/Qwen3-ASR-1.7B",
+      "revision": "7278e1e70fe206f11671096ffdd38061171dd6e5",
+      "role": "asr",
+      "runtime": "qwen-asr-transformers",
+      "status": "approved_candidate",
+      "trust_remote_code": false,
+      "languages": ["en", "ru", "ja", "hi"],
+      "limitations": ["Official Transformers backend is final-pass only; official streaming requires the vLLM backend."],
+      "license": {
+        "spdx": "Apache-2.0",
+        "commercial_use_allowed": true,
+        "redistribution_allowed": true,
+        "attribution_required": true,
+        "evidence_url": "https://huggingface.co/Qwen/Qwen3-ASR-1.7B/blob/main/LICENSE"
+      }
+    },
+    {
+      "id": "opus-mt-ru-en",
+      "owner": "Helsinki-NLP",
+      "repository": "Helsinki-NLP/opus-mt-ru-en",
+      "revision": "fbd6dc73284f95536648512cc21d57f19191961a",
+      "role": "translation",
+      "runtime": "transformers-known-architecture",
+      "status": "approved_candidate",
+      "trust_remote_code": false,
+      "languages": ["ru-en"],
+      "license": {
+        "spdx": "CC-BY-4.0",
+        "commercial_use_allowed": true,
+        "redistribution_allowed": true,
+        "attribution_required": true,
+        "evidence_url": "https://huggingface.co/Helsinki-NLP/opus-mt-ru-en/blob/main/LICENSE"
+      }
+    },
+    {
+      "id": "opus-mt-ja-en",
+      "owner": "Helsinki-NLP",
+      "repository": "Helsinki-NLP/opus-mt-ja-en",
+      "revision": "0770961a39ba6bd66305b149c3f4110bcafca2e6",
+      "role": "translation",
+      "runtime": "transformers-known-architecture",
+      "status": "approved_candidate",
+      "trust_remote_code": false,
+      "languages": ["ja-en"],
+      "license": {
+        "spdx": "Apache-2.0",
+        "commercial_use_allowed": true,
+        "redistribution_allowed": true,
+        "attribution_required": true,
+        "evidence_url": "https://huggingface.co/Helsinki-NLP/opus-mt-ja-en/blob/main/LICENSE"
+      }
+    },
+    {
+      "id": "opus-mt-es-en",
+      "owner": "Helsinki-NLP",
+      "repository": "Helsinki-NLP/opus-mt-es-en",
+      "revision": "c96e2c5399ebfae4fc43d9669556b9afa74bb69d",
+      "role": "translation",
+      "runtime": "transformers-known-architecture",
+      "status": "approved_candidate",
+      "trust_remote_code": false,
+      "languages": ["es-en"],
+      "license": {
+        "spdx": "Apache-2.0",
+        "commercial_use_allowed": true,
+        "redistribution_allowed": true,
+        "attribution_required": true,
+        "evidence_url": "https://huggingface.co/Helsinki-NLP/opus-mt-es-en/blob/main/LICENSE"
+      }
+    },
+    {
+      "id": "m2m100-418m",
+      "owner": "Facebook AI",
+      "repository": "facebook/m2m100_418M",
+      "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+      "role": "translation",
+      "runtime": "transformers-known-architecture",
+      "status": "approved_candidate",
+      "trust_remote_code": false,
+      "languages": ["ru-en", "ja-en", "hi-en", "es-en"],
+      "license": {
+        "spdx": "MIT",
+        "commercial_use_allowed": true,
+        "redistribution_allowed": true,
+        "attribution_required": true,
+        "evidence_url": "https://huggingface.co/facebook/m2m100_418M/blob/main/LICENSE"
+      }
+    },
+    {
+      "id": "madlad400-3b-mt",
+      "owner": "Google",
+      "repository": "google/madlad400-3b-mt",
+      "revision": "fa184c675da0b5c9e1c8694fccd4e12e2d422094",
+      "role": "translation",
+      "runtime": "transformers-known-architecture",
+      "status": "blocked_provenance_review",
+      "trust_remote_code": false,
+      "languages": ["ru-en", "ja-en", "hi-en", "es-en"],
+      "limitations": ["The model card records a conversion provenance caveat that requires review before packaging."],
+      "license": {
+        "spdx": "Apache-2.0",
+        "commercial_use_allowed": true,
+        "redistribution_allowed": true,
+        "attribution_required": true,
+        "evidence_url": "https://huggingface.co/google/madlad400-3b-mt/blob/main/LICENSE"
+      }
+    },
+    {
+      "id": "indictrans2-indic-en-1b",
+      "owner": "AI4Bharat",
+      "repository": "ai4bharat/indictrans2-indic-en-1B",
+      "revision": "ac3daf0ecd37be3b6957764a9179ab2b07fa9d6a",
+      "role": "translation",
+      "runtime": "blocked-unreviewed-custom-code",
+      "status": "blocked_code_review",
+      "trust_remote_code": true,
+      "languages": ["hi-en"],
+      "limitations": ["The upstream example requires custom remote code; an approved implementation must be reviewed and vendored before execution."],
+      "license": {
+        "spdx": "MIT",
+        "commercial_use_allowed": true,
+        "redistribution_allowed": true,
+        "attribution_required": true,
+        "evidence_url": "https://huggingface.co/ai4bharat/indictrans2-indic-en-1B/blob/main/LICENSE"
+      }
+    },
+    {
+      "id": "nllb-200-distilled-600m",
+      "owner": "Facebook AI",
+      "repository": "facebook/nllb-200-distilled-600M",
+      "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+      "role": "translation",
+      "runtime": "transformers-known-architecture",
+      "status": "rejected_noncommercial",
+      "trust_remote_code": false,
+      "languages": ["ru-en", "ja-en", "hi-en", "es-en"],
+      "license": {
+        "spdx": "CC-BY-NC-4.0",
+        "commercial_use_allowed": false,
+        "redistribution_allowed": true,
+        "attribution_required": true,
+        "restrictions": ["Non-commercial use only", "Model card states it is a research model and not released for production deployment"],
+        "evidence_url": "https://huggingface.co/facebook/nllb-200-distilled-600M/blob/main/LICENSE"
+      }
+    }
+  ],
+  "languages": [
+    {
+      "language": "ru",
+      "display_name": "Russian",
+      "tier": "default",
+      "installable": false,
+      "validation_status": "benchmark_required",
+      "recipe": "languages/ru.json",
+      "candidate_models": ["current-faster-whisper-small", "whisper-large-v3", "qwen3-asr-0.6b", "qwen3-asr-1.7b", "opus-mt-ru-en", "m2m100-418m"]
+    },
+    {
+      "language": "ja",
+      "display_name": "Japanese",
+      "tier": "default",
+      "installable": false,
+      "validation_status": "benchmark_required",
+      "recipe": "languages/ja.json",
+      "candidate_models": ["current-faster-whisper-small", "whisper-large-v3", "qwen3-asr-0.6b", "qwen3-asr-1.7b", "opus-mt-ja-en", "m2m100-418m"]
+    },
+    {
+      "language": "hi",
+      "display_name": "Hindi",
+      "tier": "default",
+      "installable": false,
+      "validation_status": "benchmark_and_code_review_required",
+      "recipe": "languages/hi.json",
+      "candidate_models": ["current-faster-whisper-small", "whisper-large-v3", "qwen3-asr-0.6b", "qwen3-asr-1.7b", "m2m100-418m", "indictrans2-indic-en-1b"]
+    },
+    {
+      "language": "es",
+      "display_name": "Spanish",
+      "tier": "additional",
+      "installable": false,
+      "validation_status": "fourth_language_proof_pending",
+      "recipe": "languages/es.json",
+      "candidate_models": ["whisper-large-v3", "qwen3-asr-0.6b", "qwen3-asr-1.7b", "opus-mt-es-en", "m2m100-418m"]
+    }
+  ],
+  "signature": {
+    "algorithm": "ed25519",
+    "key_id": "livesub-registry-prod-1",
+    "status": "development_unsigned",
+    "value": null
+  }
+}

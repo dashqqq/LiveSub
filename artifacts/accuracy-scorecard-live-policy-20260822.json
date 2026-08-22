@@ -1,0 +1,332 @@
+{
+  "schema_version": 1,
+  "corpus": {
+    "schema_version": 1,
+    "languages": {
+      "hi": {
+        "cases": 1,
+        "human_approved_cases": 0,
+        "pending_cases": 1,
+        "tags": [
+          "casual",
+          "clean",
+          "names"
+        ],
+        "missing_required_tags": [
+          "code_switching",
+          "fast",
+          "gaming",
+          "livestream",
+          "multiple_speakers",
+          "music",
+          "noise",
+          "numbers"
+        ],
+        "missing_audio": [],
+        "ready": false
+      },
+      "ja": {
+        "cases": 1,
+        "human_approved_cases": 0,
+        "pending_cases": 1,
+        "tags": [
+          "casual",
+          "clean"
+        ],
+        "missing_required_tags": [
+          "code_switching",
+          "fast",
+          "gaming",
+          "livestream",
+          "multiple_speakers",
+          "music",
+          "names",
+          "noise",
+          "numbers"
+        ],
+        "missing_audio": [],
+        "ready": false
+      },
+      "ru": {
+        "cases": 4,
+        "human_approved_cases": 0,
+        "pending_cases": 4,
+        "tags": [
+          "casual",
+          "clean",
+          "fast",
+          "multiple_speakers",
+          "names",
+          "numbers"
+        ],
+        "missing_required_tags": [
+          "code_switching",
+          "gaming",
+          "livestream",
+          "music",
+          "noise"
+        ],
+        "missing_audio": [],
+        "ready": false
+      }
+    },
+    "ready": false
+  },
+  "unknown_prediction_case_ids": [],
+  "scorecards": [
+    {
+      "language": "hi",
+      "engine_id": "current-faster-whisper-small",
+      "route": "live",
+      "predictions": 1,
+      "reviewed_predictions": 0,
+      "asr": {
+        "wer": null,
+        "cer": null,
+        "lid_accuracy": null
+      },
+      "translation": {
+        "bleu": null,
+        "chrf_pp": null,
+        "available": false,
+        "reason": "no reviewed pairs",
+        "comet": {
+          "score": null,
+          "available": false,
+          "reason": "no reviewed triples"
+        },
+        "critical_errors": null,
+        "critical_cases_failed": null,
+        "reviewed_pairs": 0,
+        "runtime_quality_segments": 41,
+        "runtime_quality_segments_failed": 4,
+        "runtime_quality_failure_rate": 0.0975609756097561
+      },
+      "live": {
+        "latency_p50_ms": 338.0,
+        "latency_p95_ms": 1119.0,
+        "rtf_mean": 0.13775429618397775,
+        "rtf_p95": 0.13775429618397775,
+        "memory_peak_mb": 749.1953125,
+        "vram_peak_mb": 1942.0,
+        "duplicate_rate": null,
+        "repetition_loops": 0,
+        "decoder_loop_rate": 0.024390243902439025,
+        "hallucination_rate": null
+      },
+      "selection_eligible": false
+    },
+    {
+      "language": "hi",
+      "engine_id": "whisper-large-v3",
+      "route": "live",
+      "predictions": 1,
+      "reviewed_predictions": 0,
+      "asr": {
+        "wer": null,
+        "cer": null,
+        "lid_accuracy": null
+      },
+      "translation": {
+        "bleu": null,
+        "chrf_pp": null,
+        "available": false,
+        "reason": "no reviewed pairs",
+        "comet": {
+          "score": null,
+          "available": false,
+          "reason": "no reviewed triples"
+        },
+        "critical_errors": null,
+        "critical_cases_failed": null,
+        "reviewed_pairs": 0,
+        "runtime_quality_segments": 41,
+        "runtime_quality_segments_failed": 1,
+        "runtime_quality_failure_rate": 0.024390243902439025
+      },
+      "live": {
+        "latency_p50_ms": 1042.0,
+        "latency_p95_ms": 2033.0,
+        "rtf_mean": 0.37624778872883496,
+        "rtf_p95": 0.37624778872883496,
+        "memory_peak_mb": 729.80078125,
+        "vram_peak_mb": 5079.0,
+        "duplicate_rate": null,
+        "repetition_loops": 0,
+        "decoder_loop_rate": 0.0,
+        "hallucination_rate": null
+      },
+      "selection_eligible": false
+    },
+    {
+      "language": "ja",
+      "engine_id": "current-faster-whisper-small",
+      "route": "live",
+      "predictions": 1,
+      "reviewed_predictions": 0,
+      "asr": {
+        "wer": null,
+        "cer": null,
+        "lid_accuracy": null
+      },
+      "translation": {
+        "bleu": null,
+        "chrf_pp": null,
+        "available": false,
+        "reason": "no reviewed pairs",
+        "comet": {
+          "score": null,
+          "available": false,
+          "reason": "no reviewed triples"
+        },
+        "critical_errors": null,
+        "critical_cases_failed": null,
+        "reviewed_pairs": 0,
+        "runtime_quality_segments": 14,
+        "runtime_quality_segments_failed": 0,
+        "runtime_quality_failure_rate": 0.0
+      },
+      "live": {
+        "latency_p50_ms": 191.0,
+        "latency_p95_ms": 221.1,
+        "rtf_mean": 0.1526721824686941,
+        "rtf_p95": 0.1526721824686941,
+        "memory_peak_mb": 731.3203125,
+        "vram_peak_mb": 1942.0,
+        "duplicate_rate": null,
+        "repetition_loops": 0,
+        "decoder_loop_rate": 0.0,
+        "hallucination_rate": null
+      },
+      "selection_eligible": false
+    },
+    {
+      "language": "ja",
+      "engine_id": "whisper-large-v3",
+      "route": "live",
+      "predictions": 1,
+      "reviewed_predictions": 0,
+      "asr": {
+        "wer": null,
+        "cer": null,
+        "lid_accuracy": null
+      },
+      "translation": {
+        "bleu": null,
+        "chrf_pp": null,
+        "available": false,
+        "reason": "no reviewed pairs",
+        "comet": {
+          "score": null,
+          "available": false,
+          "reason": "no reviewed triples"
+        },
+        "critical_errors": null,
+        "critical_cases_failed": null,
+        "reviewed_pairs": 0,
+        "runtime_quality_segments": 14,
+        "runtime_quality_segments_failed": 0,
+        "runtime_quality_failure_rate": 0.0
+      },
+      "live": {
+        "latency_p50_ms": 653.0,
+        "latency_p95_ms": 1001.4999999999997,
+        "rtf_mean": 0.5606551878354203,
+        "rtf_p95": 0.5606551878354203,
+        "memory_peak_mb": 712.2109375,
+        "vram_peak_mb": 5079.0,
+        "duplicate_rate": null,
+        "repetition_loops": 0,
+        "decoder_loop_rate": 0.0,
+        "hallucination_rate": null
+      },
+      "selection_eligible": false
+    },
+    {
+      "language": "ru",
+      "engine_id": "current-faster-whisper-small",
+      "route": "live",
+      "predictions": 1,
+      "reviewed_predictions": 0,
+      "asr": {
+        "wer": null,
+        "cer": null,
+        "lid_accuracy": null
+      },
+      "translation": {
+        "bleu": null,
+        "chrf_pp": null,
+        "available": false,
+        "reason": "no reviewed pairs",
+        "comet": {
+          "score": null,
+          "available": false,
+          "reason": "no reviewed triples"
+        },
+        "critical_errors": null,
+        "critical_cases_failed": null,
+        "reviewed_pairs": 0,
+        "runtime_quality_segments": 5,
+        "runtime_quality_segments_failed": 2,
+        "runtime_quality_failure_rate": 0.4
+      },
+      "live": {
+        "latency_p50_ms": 263.0,
+        "latency_p95_ms": 654.0,
+        "rtf_mean": 0.10497518050541517,
+        "rtf_p95": 0.10497518050541517,
+        "memory_peak_mb": 730.6796875,
+        "vram_peak_mb": 1942.0,
+        "duplicate_rate": null,
+        "repetition_loops": 0,
+        "decoder_loop_rate": 0.0,
+        "hallucination_rate": null
+      },
+      "selection_eligible": false
+    },
+    {
+      "language": "ru",
+      "engine_id": "whisper-large-v3",
+      "route": "live",
+      "predictions": 1,
+      "reviewed_predictions": 0,
+      "asr": {
+        "wer": null,
+        "cer": null,
+        "lid_accuracy": null
+      },
+      "translation": {
+        "bleu": null,
+        "chrf_pp": null,
+        "available": false,
+        "reason": "no reviewed pairs",
+        "comet": {
+          "score": null,
+          "available": false,
+          "reason": "no reviewed triples"
+        },
+        "critical_errors": null,
+        "critical_cases_failed": null,
+        "reviewed_pairs": 0,
+        "runtime_quality_segments": 5,
+        "runtime_quality_segments_failed": 1,
+        "runtime_quality_failure_rate": 0.2
+      },
+      "live": {
+        "latency_p50_ms": 825.0,
+        "latency_p95_ms": 1434.2,
+        "rtf_mean": 0.2805731046931408,
+        "rtf_p95": 0.2805731046931408,
+        "memory_peak_mb": 643.33984375,
+        "vram_peak_mb": 5079.0,
+        "duplicate_rate": null,
+        "repetition_loops": 0,
+        "decoder_loop_rate": 0.0,
+        "hallucination_rate": null
+      },
+      "selection_eligible": false
+    }
+  ],
+  "selection_ready": false,
+  "notice": "Missing metrics are null, never estimated or fabricated."
+}

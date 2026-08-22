@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://livesub.local/schemas/model-registry.schema.json",
+  "title": "LiveSub curated model and language registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "registry_version", "generated_at", "models", "languages", "signature"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "registry_version": { "type": "string", "minLength": 1 },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "production_ready": { "type": "boolean" },
+    "notes": { "type": "array", "items": { "type": "string" } },
+    "models": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["id", "owner", "repository", "revision", "role", "status", "trust_remote_code", "license"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$" },
+          "owner": { "type": "string", "minLength": 1 },
+          "repository": { "type": "string", "pattern": "^[^/]+/[^/]+$" },
+          "revision": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+          "role": { "enum": ["asr", "translation", "vad"] },
+          "status": { "type": "string", "minLength": 1 },
+          "trust_remote_code": { "type": "boolean" },
+          "artifacts": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["path", "size_bytes", "sha256"],
+              "properties": {
+                "path": { "type": "string", "minLength": 1 },
+                "size_bytes": { "type": "integer", "minimum": 1 },
+                "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+              }
+            }
+          },
+          "license": {
+            "type": "object",
+            "required": ["spdx", "commercial_use_allowed", "redistribution_allowed", "evidence_url"],
+            "properties": {
+              "spdx": { "type": "string", "minLength": 1 },
+              "commercial_use_allowed": { "type": "boolean" },
+              "redistribution_allowed": { "type": "boolean" },
+              "evidence_url": { "type": "string", "format": "uri" },
+              "attribution_required": { "type": "boolean" },
+              "restrictions": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        }
+      }
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["language", "display_name", "tier", "installable", "validation_status", "recipe"],
+        "properties": {
+          "language": { "type": "string", "pattern": "^[a-z]{2,3}(-[A-Za-z0-9]+)?$" },
+          "display_name": { "type": "string", "minLength": 1 },
+          "tier": { "enum": ["default", "additional"] },
+          "installable": { "type": "boolean" },
+          "validation_status": { "type": "string", "minLength": 1 },
+          "recipe": { "type": "string", "minLength": 1 },
+          "candidate_models": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "signature": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "key_id", "status", "value"],
+      "properties": {
+        "algorithm": { "const": "ed25519" },
+        "key_id": { "type": "string", "minLength": 1 },
+        "status": { "enum": ["signed", "development_unsigned"] },
+        "value": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

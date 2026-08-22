@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "language": "hi",
+  "display_name": "Hindi",
+  "target_language": "en",
+  "status": "benchmark_and_code_review_required",
+  "installable": false,
+  "registry_version": "2026.08.22-dev1",
+  "vad": {
+    "candidate": "silero-vad-6.2.1",
+    "settings_status": "ab_test_required",
+    "speech_threshold": 0.5,
+    "minimum_speech_ms": 64,
+    "minimum_silence_ms": 450,
+    "speech_padding_ms": 400
+  },
+  "lid": {
+    "strategy": "accumulated_evidence_lock",
+    "lock_threshold": 0.82,
+    "minimum_useful_speech_ms": 1500,
+    "unlock": ["long_silence", "repeated_high_confidence_contradiction", "explicit_user_request", "new_media_session"],
+    "settings_status": "benchmark_required",
+    "code_switching_focus": ["Hindi-English", "Hinglish", "Latin-script named entities"]
+  },
+  "routes_to_benchmark": [
+    {
+      "name": "whisper-direct",
+      "asr": "whisper-large-v3",
+      "translation": "whisper-large-v3-direct",
+      "preserves_source": false
+    },
+    {
+      "name": "source-m2m100",
+      "asr_candidates": ["qwen3-asr-1.7b", "qwen3-asr-0.6b", "whisper-large-v3", "current-faster-whisper-small"],
+      "translation": "m2m100-418m",
+      "preserves_source": true
+    },
+    {
+      "name": "source-indictrans2",
+      "asr_candidates": ["qwen3-asr-1.7b", "qwen3-asr-0.6b", "whisper-large-v3"],
+      "translation": "indictrans2-indic-en-1b",
+      "preserves_source": true,
+      "blocked": true,
+      "blocker": "Upstream custom model code has not been reviewed and vendored; trust_remote_code is prohibited."
+    }
+  ],
+  "profiles": {
+    "maximum_accuracy": { "selection": null },
+    "balanced": { "selection": null },
+    "low_resource": { "selection": null }
+  },
+  "selection": {
+    "decision": "pending",
+    "reason": "Hindi/Hinglish gold coverage and the required IndicTrans2 implementation review are incomplete."
+  }
+}

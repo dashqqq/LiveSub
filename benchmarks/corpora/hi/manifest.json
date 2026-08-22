@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "language": "hi",
+  "primary_asr_metric": "wer_and_cer",
+  "cases": [
+    {
+      "id": "hi-wikitongues-001",
+      "audio": "../../../data/test-media/hindi-wikitongues.ogg",
+      "duration_ms": 134722,
+      "tags": ["clean", "casual", "names"],
+      "gold_status": "pending_human_review",
+      "source_text": null,
+      "semantic_english": null,
+      "annotations": { "names": [], "products": [], "critical_terms": [] },
+      "provenance": {
+        "source_url": "https://commons.wikimedia.org/wiki/File:WIKITONGUES_Kavyanjali_speaking_Hindi.ogg",
+        "license": "CC BY-SA per pre-existing verification record; attribution review pending",
+        "human_reviewer": null,
+        "reviewed_at": null
+      }
+    }
+  ]
+}

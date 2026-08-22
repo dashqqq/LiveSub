@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://livesub.local/schema/prediction-v1.json",
+  "title": "LiveSub benchmark prediction record",
+  "type": "object",
+  "required": ["schema_version", "case_id", "engine_id", "model_id", "route"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "case_id": { "type": "string" },
+    "engine_id": { "type": "string" },
+    "model_id": { "type": "string" },
+    "route": { "enum": ["source_asr", "direct_translation", "asr_then_mt", "live"] },
+    "detected_language": { "type": ["string", "null"] },
+    "language_confidence": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+    "source_text": { "type": ["string", "null"] },
+    "translation_text": { "type": ["string", "null"] },
+    "display_text": { "type": ["string", "null"] },
+    "latency_ms": { "type": ["number", "null"], "minimum": 0 },
+    "rtf": { "type": ["number", "null"], "minimum": 0 },
+    "memory_mb": { "type": ["number", "null"], "minimum": 0 },
+    "vram_mb": { "type": ["number", "null"], "minimum": 0 },
+    "error": { "type": ["string", "null"] },
+    "metadata": { "type": "object" }
+  },
+  "additionalProperties": true
+}

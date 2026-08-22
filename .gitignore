@@ -1,0 +1,60 @@
+# Rust build output
+/target/
+
+# Python environments and caches
+/.venv/
+/.venv-*/
+/.benchmark-packages/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local models, downloads, and test media
+/models/
+/data/
+*.part
+*.download
+*.tmp
+
+# Packaged applications and installer output belong in GitHub Releases
+/dist/
+/installer/*.exe
+*.msi
+
+# Generated and machine-specific diagnostics. Keep only reviewed aggregate
+# evidence that is explicitly re-included below.
+/artifacts/*
+!/artifacts/accuracy-scorecard-live-policy-20260822.md
+!/artifacts/accuracy-scorecard-live-policy-20260822.json
+!/artifacts/accuracy-scorecard-policy-corrected-20260822.md
+!/artifacts/live-semantic-verification-decision-20260822.md
+!/artifacts/vad-ab-decision-20260822.md
+*.log
+*.dmp
+*.dump
+*.trace
+
+# Secrets and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+*.cer
+*.crt
+credentials.json
+secrets.json
+
+# Editors and operating systems
+.idea/
+.vscode/
+.vs/
+*.user
+*.suo
+.DS_Store
+Thumbs.db
+Desktop.ini

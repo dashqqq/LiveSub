@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "language": "ru",
+  "primary_asr_metric": "wer_and_cer",
+  "cases": [
+    {
+      "id": "ru-wikimedia-dialog-001",
+      "audio": "../../../data/test-media/russian-dialog.ogg",
+      "duration_ms": 17766,
+      "tags": ["casual", "multiple_speakers", "names"],
+      "gold_status": "pending_human_review",
+      "source_text": null,
+      "semantic_english": null,
+      "annotations": { "names": [], "products": [], "critical_terms": [] },
+      "provenance": {
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ru-dialog_1.ogg",
+        "license": "see upstream Wikimedia file page; packaging review pending",
+        "human_reviewer": null,
+        "reviewed_at": null
+      }
+    },
+    {
+      "id": "ru-wikimedia-female-001",
+      "audio": "../../../data/test-media/russian-female-nouns.ogg",
+      "duration_ms": 536607,
+      "tags": ["clean", "names"],
+      "gold_status": "pending_human_review",
+      "source_text": null,
+      "semantic_english": null,
+      "annotations": { "names": [], "products": [], "critical_terms": [] },
+      "provenance": {
+        "source_url": "local pre-existing repository fixture; upstream URL not recorded",
+        "license": "provenance repair required before redistribution",
+        "human_reviewer": null,
+        "reviewed_at": null
+      }
+    },
+    {
+      "id": "ru-wikimedia-podcasting-001",
+      "audio": "../../../data/test-media/russian-podcasting.ogg",
+      "duration_ms": 262176,
+      "tags": ["casual", "fast"],
+      "gold_status": "pending_human_review",
+      "source_text": null,
+      "semantic_english": null,
+      "annotations": { "names": [], "products": [], "critical_terms": [] },
+      "provenance": {
+        "source_url": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%BE%D0%B4%D0%BA%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%B3.ogg",
+        "license": "see upstream Wikimedia file page; packaging review pending",
+        "human_reviewer": null,
+        "reviewed_at": null
+      }
+    },
+    {
+      "id": "ru-wikimedia-narration-001",
+      "audio": "../../../data/test-media/russian-russia-intro.ogg",
+      "duration_ms": 297905,
+      "tags": ["clean", "numbers"],
+      "gold_status": "pending_human_review",
+      "source_text": null,
+      "semantic_english": null,
+      "annotations": { "names": [], "products": [], "critical_terms": [] },
+      "provenance": {
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ru-Russia_part_1_Intro.ogg",
+        "license": "see upstream Wikimedia file page; packaging review pending",
+        "human_reviewer": null,
+        "reviewed_at": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://livesub.local/schema/golden-corpus-v1.json",
+  "title": "LiveSub human golden corpus",
+  "type": "object",
+  "required": ["schema_version", "language", "primary_asr_metric", "cases"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "language": { "type": "string", "pattern": "^[a-z]{2,3}$" },
+    "primary_asr_metric": { "enum": ["wer", "cer", "wer_and_cer"] },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "audio",
+          "duration_ms",
+          "tags",
+          "gold_status",
+          "source_text",
+          "semantic_english",
+          "annotations",
+          "provenance"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$" },
+          "audio": { "type": "string" },
+          "duration_ms": { "type": ["integer", "null"], "minimum": 1 },
+          "tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "gold_status": { "enum": ["pending_human_review", "human_approved", "rejected"] },
+          "source_text": { "type": ["string", "null"] },
+          "semantic_english": { "type": ["string", "null"] },
+          "annotations": {
+            "type": "object",
+            "properties": {
+              "names": { "type": "array", "items": { "type": "string" } },
+              "products": { "type": "array", "items": { "type": "string" } },
+              "critical_terms": { "type": "array", "items": { "type": "string" } }
+            },
+            "additionalProperties": true
+          },
+          "provenance": {
+            "type": "object",
+            "required": ["source_url", "license", "human_reviewer"],
+            "properties": {
+              "source_url": { "type": "string" },
+              "license": { "type": "string" },
+              "human_reviewer": { "type": ["string", "null"] },
+              "reviewed_at": { "type": ["string", "null"] }
+            },
+            "additionalProperties": true
+          }
+        }
+      }
+    }
+  }
+}

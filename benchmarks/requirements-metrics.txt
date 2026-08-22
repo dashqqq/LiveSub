@@ -1,0 +1,3 @@
+# Offline metric tooling. COMET is intentionally separate because its evaluator
+# weights must be reviewed, pinned, and licensed before download.
+sacrebleu==2.5.1

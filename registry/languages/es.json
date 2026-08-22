@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "language": "es",
+  "display_name": "Spanish",
+  "target_language": "en",
+  "tier": "additional",
+  "status": "fourth_language_proof_pending",
+  "installable": false,
+  "registry_version": "2026.08.22-dev1",
+  "vad": {
+    "candidate": "silero-vad-6.2.1",
+    "settings_status": "ab_test_required"
+  },
+  "lid": {
+    "strategy": "accumulated_evidence_lock",
+    "settings_status": "benchmark_required"
+  },
+  "routes_to_benchmark": [
+    {
+      "name": "source-opus",
+      "asr_candidates": ["qwen3-asr-1.7b", "qwen3-asr-0.6b", "whisper-large-v3"],
+      "translation": "opus-mt-es-en",
+      "preserves_source": true
+    },
+    {
+      "name": "source-m2m100",
+      "asr_candidates": ["qwen3-asr-1.7b", "qwen3-asr-0.6b", "whisper-large-v3"],
+      "translation": "m2m100-418m",
+      "preserves_source": true
+    }
+  ],
+  "profiles": {
+    "maximum_accuracy": { "selection": null },
+    "balanced": { "selection": null },
+    "low_resource": { "selection": null }
+  },
+  "selection": {
+    "decision": "pending",
+    "reason": "This catalog recipe demonstrates due diligence only; no fourth-language end-to-end installation claim is made."
+  }
+}

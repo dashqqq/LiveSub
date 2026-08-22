@@ -1,0 +1,76 @@
+name: Bug report
+description: Report a reproducible LiveSub application problem
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping test LiveSub Preview. Do not include secrets, private transcript text, or copyrighted/private audio in a public issue.
+  - type: input
+    id: version
+    attributes:
+      label: LiveSub version
+      description: Use the version shown in the application or release.
+      placeholder: 0.1.0 Preview
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2, 64-bit
+    validations:
+      required: true
+  - type: textarea
+    id: hardware
+    attributes:
+      label: Hardware
+      description: CPU, GPU, RAM, and audio output/device type.
+      placeholder: CPU; GPU and driver; RAM; speakers/headset/virtual device
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the visible behavior and what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Launch LiveSub
+        2. Start subtitles
+        3. Play media
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: Audio source
+      options:
+        - Browser or web video
+        - Livestream
+        - Game
+        - Discord or voice chat
+        - VLC or media player
+        - Other Windows application
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics and error text
+      description: Include status, sample rate, backend, RTF, latency, queue depth, and drop counts when relevant. Redact private paths and transcript text.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Privacy and duplicate check
+      options:
+        - label: I searched for an existing report.
+          required: true
+        - label: I removed secrets, private transcript text, personal paths, and private or copyrighted audio.
+          required: true

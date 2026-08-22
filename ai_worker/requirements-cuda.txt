@@ -1,0 +1,4 @@
+# Optional Windows NVIDIA acceleration for CTranslate2/faster-whisper.
+# Keep this separate so CPU-only installations do not download large runtimes.
+nvidia-cublas-cu12>=12,<13
+nvidia-cudnn-cu12>=9,<10

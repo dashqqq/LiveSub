@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "language": "ja",
+  "primary_asr_metric": "cer",
+  "cases": [
+    {
+      "id": "ja-wikimedia-practice-001",
+      "audio": "../../../data/test-media/japanese-practice.ogg",
+      "duration_ms": 30928,
+      "tags": ["clean", "casual"],
+      "gold_status": "pending_human_review",
+      "source_text": null,
+      "semantic_english": null,
+      "annotations": { "names": [], "products": [], "critical_terms": [] },
+      "provenance": {
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ja-pronunciation-practice5.ogg",
+        "license": "public domain per pre-existing verification record; recheck before packaging",
+        "human_reviewer": null,
+        "reviewed_at": null
+      }
+    }
+  ]
+}
