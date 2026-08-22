@@ -6,11 +6,11 @@ Scope: the rebuilt Windows installer produced from `scripts/package-windows.ps1`
 
 ## Current decision
 
-**Installer redistribution: CLEARED for the v0.1.0 Preview, subject to rebuilding and passing the final artifact smoke gate.**
+**Installer redistribution: CLEARED for the v0.1.0 Preview.**
 
 The project owner explicitly authorized LiveSub's application source under MIT with the exact copyright line `Copyright (c) 2026 AKASH DEEP BARUAH`. The canonical root `LICENSE` now matches `Cargo.toml`. This grant applies only to LiveSub's own source; every bundled runtime, model, library, and installer component remains under the separate terms recorded below and in the SBOM.
 
-The historical pre-audit and missing-license engineering installers must not be uploaded. The release candidate must be rebuilt without `-AllowMissingRootLicense` from the license-bearing, branding-bearing commit so the root grant, notices, icon, SBOM, checksum, and build provenance all describe the same artifact.
+The historical pre-audit and missing-license engineering installers must not be uploaded. The cleared release candidate was built without `-AllowMissingRootLicense` from commit `5224981bf622ca146663c3476cfdef576a5535ce`. Its root grant, notices, official icon, SBOM, checksum, and build provenance describe the same artifact: 1,453,494,708 bytes with SHA-256 `be81ef997f4a2e467e68d4d651481b73a24b8dacdaf5494c184f3e1df9e724a5`.
 
 ## Clearance matrix
 
@@ -43,15 +43,15 @@ The historical pre-audit and missing-license engineering installers must not be 
 ## Completed technical conditions
 
 - Reviewed packaging and compliance inputs are committed.
-- The engineering artifact contains no PyAV/FFmpeg/media-codec payload and carries 320 hash-verified notice files.
+- The final candidate contains no PyAV/FFmpeg/media-codec payload and carries 320 hash-verified notice files.
 - The payload audit passes with zero findings; tracked-source secret and machine-path scans are clean; Microsoft Defender reported no threats in the final local installer.
-- Rust/Python suites, CPU/int8 and CUDA/float16 warm-up, real WASAPI loopback, Russian/Japanese/Hindi translation routing, native overlay, isolated install and clean uninstall were exercised.
-- The final engineering checksum and CycloneDX 1.6 SBOM were generated from the rebuilt artifact.
+- Rust/Python suites, CPU/int8 and CUDA/float16 real inference, real WASAPI loopback, Russian/Japanese/Hindi/English paths, native overlay, isolated install, official branding, and clean uninstall passed on the final candidate.
+- The final checksum and CycloneDX 1.6 SBOM were generated from the rebuilt artifact; 199 components are recorded with zero `BLOCKED`, `UNKNOWN`, or `OWNER REVIEW REQUIRED` bundled statuses.
 
 ## Remaining conditions before publication
 
-1. Rebuild without `-AllowMissingRootLicense` from the license-bearing, branding-bearing commit and repeat the checksum, payload, install/uninstall, and smoke gates.
-2. Confirm the rebuilt SBOM has zero `BLOCKED`, `UNKNOWN`, or `OWNER REVIEW REQUIRED` bundled components.
-3. Create the immutable `v0.1.0` tag, upload only the cleared artifact/checksum/SBOM to the existing draft, and publish it as a pre-release.
+1. Create the immutable `v0.1.0` tag at build commit `5224981bf622ca146663c3476cfdef576a5535ce`.
+2. Upload only the cleared artifact, checksum, and SBOM to the existing draft and publish it as a pre-release.
+3. Download the public asset, match its checksum to the reviewed local artifact, install it, repeat the public WASAPI/Russian smoke, and uninstall it.
 
 Code signing and full accuracy certification remain separate Stable-release work and do not alter the redistribution decision above.

@@ -1,10 +1,10 @@
 # LiveSub v0.1.0 Preview software bill of materials
 
-- Build commit: `151bdd360239ed3dc8e0a4fe32e7146f8b5f8694`
+- Build commit: `5224981bf622ca146663c3476cfdef576a5535ce`
 - Installer: `dist/LiveSub-Setup.exe`
-- Installer SHA-256: `0d6b2fcf591bf5b9d1337fb759c5f415745c3e95f63100b1d57930790066adb3`
-- Payload files: 2,662
-- Payload bytes: 2,784,157,329
+- Installer SHA-256: `be81ef997f4a2e467e68d4d651481b73a24b8dacdaf5494c184f3e1df9e724a5`
+- Payload files: 2,663
+- Payload bytes: 2,784,538,912
 - Components recorded: 199
 
 This inventory is derived from the staged release payload, installed Python metadata, the Windows-filtered normal Cargo dependency graph, and separately identified native/model components. Build-only and development-only dependencies are excluded unless their code is present in the generated installer. It is an engineering compliance record, not legal advice.
@@ -186,7 +186,7 @@ This inventory is derived from the staged release payload, installed Python meta
 | Intel OpenMP Runtime | 20250910 | YES | YES | Intel Simplified Software License | Permitted under recorded terms | Include applicable notice/license text | Preserve component license/notices; no LiveSub source disclosure identified | CTranslate2 4.8.1 Windows wheel; Authenticode signer Intel Corporation | CLEARED WITH NOTICE |
 | LAPACK in OpenBLAS | OpenBLAS-0.3.34.0.0 | YES | YES | BSD-3-Clause-Open-MPI | Permitted under recorded terms | Include applicable notice/license text | Preserve component license/notices; no LiveSub source disclosure identified | NumPy 2.5.2 wheel LICENSE.txt identifies LAPACK bundled in the OpenBLAS DLL | CLEARED WITH NOTICE |
 | LiveSub Setup | 0.1.0-preview | YES | YES | Inno Setup License | Permitted under recorded terms | Include applicable notice/license text | Preserve component license/notices; no LiveSub source disclosure identified | dist/LiveSub-Setup.exe built with Inno Setup 6.7.3 | CLEARED WITH NOTICE |
-| LiveSub | 0.1.0-preview | YES | YES | OWNER REVIEW REQUIRED: Cargo.toml says MIT; root LICENSE missing | Owner must confirm copyright holder and source-license grant | Include applicable notice/license text | Preserve component license/notices; no LiveSub source disclosure identified | release payload/livesub.exe; repository root LICENSE is absent | OWNER REVIEW REQUIRED |
+| LiveSub | 0.1.0-preview | YES | YES | MIT | Permitted under recorded terms | Include applicable notice/license text | Preserve component license/notices; no LiveSub source disclosure identified | release payload/livesub.exe and root LICENSE | CLEARED WITH NOTICE |
 | Microsoft Visual C++ Runtime (NumPy wheel) | 14.40.33810.0 | YES | YES | Microsoft Visual C++ Runtime terms | Permitted under recorded terms | Include applicable notice/license text | Preserve component license/notices; no LiveSub source disclosure identified | Unmodified msvcp140 DLL supplied in the NumPy 2.5.2 Windows wheel | CLEARED WITH NOTICE |
 | Microsoft Visual C++ Runtime | 14.42.34438.0 | YES | YES | Microsoft Visual C++ Runtime terms | Permitted under recorded terms | Include applicable notice/license text | Preserve component license/notices; no LiveSub source disclosure identified | Microsoft Distributable Code in CPython 3.12.10 Windows build | CLEARED WITH NOTICE |
 | NVIDIA cuDNN compatibility runtime | 9.10.2.21 | YES | YES | NVIDIA SDK License Agreement and cuDNN Supplement | Permitted under recorded terms | Include applicable notice/license text | Preserve component license/notices; no LiveSub source disclosure identified | CTranslate2 4.8.1 wheel compatibility DLL; Authenticode signer NVIDIA Corporation | CLEARED WITH NOTICE |
@@ -231,4 +231,4 @@ This inventory is derived from the staged release payload, installed Python meta
 - Intel oneMKL code and the Intel OpenMP runtime arrive through the CTranslate2 wheel; the Intel Simplified Software License permits unmodified binary redistribution with its copyright and terms reproduced.
 - NumPy 2.5.2 dynamically bundles OpenBLAS/LAPACK. Its OpenBLAS DLL also incorporates eligible GCC runtime code under GPL-3.0-or-later WITH GCC-exception-3.1; the exception permits this compiled use without imposing GPL terms on LiveSub, and the complete notice and exception are carried from the wheel.
 - CPython's included license expressly addresses redistribution of its Windows binary build and embedded Microsoft Distributable Code; its conditions are carried into the notice bundle.
-- `Cargo.toml` declares MIT, but the root LiveSub copyright holder has not been established and a root `LICENSE` remains absent. This is intentionally not converted to `CLEARED` by this generator.
+- The canonical root LiveSub `LICENSE` is included in the payload and recorded as a distinct application-source grant.

@@ -2,10 +2,10 @@
   "$schema": "https://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:ad873d5e-b6d7-5f24-a017-fa1d6be313c9",
+  "serialNumber": "urn:uuid:24bce0e2-778c-5ba5-8b82-0bd968fee4e9",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-08-22T19:35:09Z",
+    "timestamp": "2026-08-22T20:19:05Z",
     "tools": {
       "components": [
         {
@@ -24,11 +24,11 @@
     "properties": [
       {
         "name": "livesub:BuildCommit",
-        "value": "151bdd360239ed3dc8e0a4fe32e7146f8b5f8694"
+        "value": "5224981bf622ca146663c3476cfdef576a5535ce"
       },
       {
         "name": "livesub:InstallerSHA256",
-        "value": "0d6b2fcf591bf5b9d1337fb759c5f415745c3e95f63100b1d57930790066adb3"
+        "value": "be81ef997f4a2e467e68d4d651481b73a24b8dacdaf5494c184f3e1df9e724a5"
       }
     ]
   },
@@ -5586,7 +5586,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "0d6b2fcf591bf5b9d1337fb759c5f415745c3e95f63100b1d57930790066adb3"
+          "content": "be81ef997f4a2e467e68d4d651481b73a24b8dacdaf5494c184f3e1df9e724a5"
         }
       ]
     },
@@ -5598,7 +5598,7 @@
       "licenses": [
         {
           "license": {
-            "name": "OWNER REVIEW REQUIRED: Cargo.toml says MIT; root LICENSE missing"
+            "name": "MIT"
           }
         }
       ],
@@ -5613,7 +5613,7 @@
         },
         {
           "name": "livesub:Evidence",
-          "value": "release payload/livesub.exe; repository root LICENSE is absent"
+          "value": "release payload/livesub.exe and root LICENSE"
         }
       ],
       "purl": "pkg:generic/livesub@0.1.0-preview",
@@ -5626,7 +5626,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "ddf42edc59c823ab58eaa73b34247492d18087b3b69e52974e81fd5aee281da1"
+          "content": "1084385a04981dde183760abfefbb398dcb5103260c676025d690df1278fb090"
         }
       ]
     },
