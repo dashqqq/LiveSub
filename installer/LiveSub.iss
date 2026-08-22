@@ -31,6 +31,8 @@ UninstallDisplayIcon={app}\livesub.exe
 UninstallDisplayName=LiveSub
 VersionInfoVersion={#AppVersion}.0
 VersionInfoDescription=LiveSub Windows Installer
+VersionInfoCompany=
+VersionInfoOriginalFileName=LiveSub-Setup.exe
 VersionInfoProductName=LiveSub
 VersionInfoProductVersion={#AppVersion}
 
