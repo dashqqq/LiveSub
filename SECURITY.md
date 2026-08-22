@@ -6,9 +6,9 @@ LiveSub is currently a Preview and has no stable supported release line. Securit
 
 ## Report a vulnerability privately
 
-Open the repository’s [Security page](https://github.com/dashqqq/LiveSub/security) and use **Report a vulnerability** if private vulnerability reporting is enabled.
+Use [GitHub private vulnerability reporting](https://github.com/dashqqq/LiveSub/security/advisories/new). It is enabled for this public repository.
 
-If that route is unavailable, open a public issue containing only a request for a private contact channel. Do not include exploit details, credentials, private audio/transcripts, secrets, or proof-of-concept code in that public issue.
+If that route is temporarily unavailable, open a public issue containing only a request for a private contact channel. Do not include exploit details, credentials, private audio/transcripts, secrets, or proof-of-concept code in that public issue.
 
 Include privately:
 

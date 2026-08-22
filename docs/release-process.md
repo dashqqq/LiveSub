@@ -63,8 +63,9 @@ Tagging and publishing are deliberately not automated merely because a tag exist
 
 Do not overwrite release assets in place. If a Preview is invalid, mark it clearly, remove it from the preferred download path, and publish a corrected version/tag. Keep previous known-good Language Packs until candidates pass integrity, accuracy, latency, stability, and hardware acceptance.
 
-## Proposed repository metadata
+## Repository metadata
 
 - **Description:** Accuracy-first live English subtitles for Windows system audio. Russian, Japanese and Hindi.
 - **Topics:** `live-subtitles`, `speech-recognition`, `translation`, `windows`, `asr`, `accessibility`, `real-time`, `russian`, `japanese`, `hindi`
 - **Website:** leave empty until an official site exists.
+- **Private vulnerability reporting:** enabled.
